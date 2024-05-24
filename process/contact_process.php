@@ -38,8 +38,8 @@ if (!empty($name) && !empty($email) && !empty($subject) && !empty($message)) {
         $mail->Port = 465; // TCP port to connect to
 
         // Recipients
-        $mail->setFrom('info@pikuprd.com', 'pikuprd'); // Your sending email and name
-        $mail->addAddress('info@pikuprd.com'); // Add the recipient
+        $mail->setFrom('info@rodrieltours.com', 'Rodirel Tours'); // Your sending email and name
+        $mail->addAddress('info@rodrieltours.com'); // Add the recipient
 
         // Content
         $mail->isHTML(true); // Set email format to HTML
