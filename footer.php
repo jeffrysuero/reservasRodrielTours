@@ -1,51 +1,19 @@
-<footer class="footer-area section_gap ">
-    <style>
-        .footer-area{
-            
-        background:#04091e; 
-
-        }
-    </style>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3  col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6 class="footer_title"><b style="color: #EF4F16;">About Agency</b></h6>
-                    <p>En Rodriel Tours, nos dedicamos a ofrecer experiencias de transporte turístico inolvidables. Con años de experiencia en la industria, hemos perfeccionado nuestros servicios para garantizar que cada viaje con nosotros sea cómodo, seguro y lleno de aventuras</p>
-                </div>
+<footer class="section page-footer page-footer-minimal novi-background bg-cover text-center bg-gray-darker">
+    <div class="container container-wide">
+        <div class="row row-fix justify-content-sm-center align-items-md-center row-30">
+            <!-- <div class="col-md-10 col-lg-7 col-xl-4 text-xl-left"><a href="index.html"><img class="inverse-logo" src="images/logo-inverse-208x46.png" alt="" width="208" height="46" /></a></div> -->
+            <div class="col-md-10 col-lg-7 col-xl-4">
+                <!-- <p class="right">&#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">TemplateMonster</a></p> -->
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6 class="footer_title"><b style="color: #EF4F16;">Navigation Links</b></h6>
-                    <div class="row">
-                        <div class="col-8">
-                            <ul class="list_style">
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="reservation.php">Reservation</a></li>
-                              
-                            </ul>
-                        </div>
-                        <div class="col-8">
-                            <ul class="list_style">
-                                
-                                <li><a href="contact.php">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-   
-   
-        <div class="border_line"></div>
-        <div class="row footer-bottom d-flex justify-content-between align-items-center">
-          
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            <div class="col-lg-12 col-sm-12 footer-social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-right">
+                <ul class="group-xs group-middle">
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="#"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-twitter" href="#"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="#"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-google" href="#"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-linkedin" href="#"></a></li>
+                </ul>
             </div>
         </div>
     </div>
 </footer>
-

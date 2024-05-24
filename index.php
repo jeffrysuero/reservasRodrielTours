@@ -1,219 +1,371 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
 
 <head>
-    <!-- Required meta tags -->
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" href="image/faviconRodriel.png" type="image/png">
-    <title>rodriel Trasnportes Turisticos</title>
-    <!-- Bootstrap CSS -->
+    <link rel="icon" href="images/faviconRodriel.png" type="image/x-icon">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:200,400%7CLato:300,400,300italic,700%7CMontserrat:900">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="vendors/linericon/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-    <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel ="stylesheet" href = "css/footer.css">
-
+    <link rel="stylesheet" href="css/fonts.css">
+    <!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"> </script>
+		<![endif]-->
 </head>
 
 <body>
+    <!-- Page preloader-->
+    <?php require_once('page_loader.php')   ?>
+    <!-- Page-->
 
-    <!--================Header Area =================-->
-    <?php require_once('header.php')  ?>
-    <!--================Header Area =================-->
-
-    <!--================Banner Area =================-->
-    <?php require_once('section.php')  ?>
-    <!--================Banner Area =================-->
-
-
-    <!--================ Accomodation Area  =================-->
-    <section class="accomodation_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Máximo confort y seguridad para tu viaje</h2>
-                <p>Vehículos con licencia, conductores profesionales </p>
+    <!-- Page Header-->
+    <?php require_once('header.php')   ?>
+    <section class="section">
+        <div class="swiper-form-wrap">
+            <!-- Swiper-->
+            <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-align-left swiper-align-left-custom context-dark bg-gray-darker" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-1.jpg">
+                        <div class="swiper-slide-caption">
+                            <div class="container container-bigger swiper-main-section">
+                                <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                                    <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                                        <h3>Hundreds of Amazing Destinations</h3>
+                                        <div class="divider divider-decorate"></div>
+                                        <p class="text-spacing-sm">We offer a variety of destinations to travel to, ranging from exotic to some extreme ones. They include very popular countries and cities like Paris, Rio de Janeiro, Cairo and a lot of others.</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-2.jpg">
+                        <div class="swiper-slide-caption">
+                            <div class="container container-bigger swiper-main-section">
+                                <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                                    <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                                        <h3>The Trip of Your Dream</h3>
+                                        <div class="divider divider-decorate"></div>
+                                        <p class="text-spacing-sm">Our travel agency is ready to offer you an exciting vacation that is designed to fit your own needs and wishes. Whether it’s an exotic cruise or a trip to your favorite resort, you will surely have the best experience.</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-3.jpg">
+                        <div class="swiper-slide-caption">
+                            <div class="container container-bigger swiper-main-section">
+                                <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                                    <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                                        <h3>unique Travel Insights</h3>
+                                        <div class="divider divider-decorate"></div>
+                                        <p class="text-spacing-sm">Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Swiper controls-->
+                <div class="swiper-pagination-wrap">
+                    <div class="container container-bigger">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row mb_30">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/auto10.jpg" alt="">
-                            <!-- <a href="#" class="btn theme_btn button_hover">Book Now</a> -->
+            <div class="container container-bigger form-request-wrap form-request-wrap-modern">
+                <div class="row row-fix justify-content-sm-center justify-content-lg-end">
+                    <div class="col-lg-6 col-xxl-5">
+                        <div class="form-request form-request-modern bg-gray-lighter novi-background">
+                            <h4>Find your Tour</h4>
+                            <!-- RD Mailform-->
+                            <form class="rd-mailform form-fix">
+                                <div class="row row-20 row-fix">
+                                    <div class="col-sm-12">
+                                        <label class="form-label-outside">From</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
+                                                <option value="1">New York</option>
+                                                <option value="2">Lisbon</option>
+                                                <option value="3">Stockholm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label class="form-label-outside">To</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
+                                                <option value="1">Chicago</option>
+                                                <option value="2">Madrid</option>
+                                                <option value="3">Paris</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                        <label class="form-label-outside">Depart Date</label>
+                                        <div class="form-wrap form-wrap-validation">
+                                            <!-- Select -->
+                                            <input class="form-input" id="dateForm" name="date" type="text" data-time-picker="date">
+                                            <label class="form-label" for="dateForm">Choose the date</label>
+                                            <!--select.form-input.select-filter(data-placeholder="All", data-minimum-results-for-search="Infinity",  name='city')-->
+                                            <!--  option(value="1") Choose the date-->
+                                            <!--  option(value="2") Primary-->
+                                            <!--  option(value="3") Middle-->
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-6">
+                                        <label class="form-label-outside">Duration</label>
+                                        <div class="form-wrap form-wrap-validation">
+                                            <!-- Select 2-->
+                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
+                                                <option value="1">Any length</option>
+                                                <option value="2">2 days</option>
+                                                <option value="3">3 days</option>
+                                                <option value="4">4 days</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="form-label-outside">Adults</label>
+                                        <div class="form-wrap form-wrap-modern">
+                                            <input class="form-input input-append" id="form-element-stepper" type="number" min="0" max="300" value="2">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label class="form-label-outside">Children</label>
+                                        <div class="form-wrap form-wrap-modern">
+                                            <input class="form-input input-append" id="form-element-stepper-1" type="number" min="0" max="300" value="0">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-wrap form-button">
+                                    <button class="button button-block button-secondary" type="submit">search flight</button>
+                                </div>
+                            </form>
                         </div>
-                        <!-- <a href="#"><h4 class="sec_h4">Double Deluxe Room</h4></a>
-                            <h5>$250<small>/night</small></h5> -->
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/auto5.jpg" alt="">
-                            <!-- <a href="#" class="btn theme_btn button_hover">Book Now</a> -->
-                        </div>
-                        <!-- <a href="#"><h4 class="sec_h4">Single Deluxe Room</h4></a>
-                            <h5>$200<small>/night</small></h5> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-variant-1 bg-default novi-background bg-cover">
+        <div class="container container-wide">
+            <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
+                <div class="col-xl-8">
+                    <div class="parallax-text-wrap">
+                        <h3>confort y seguridad</h3><span class="parallax-text">RODRIEL TOURS</span>
                     </div>
+                    <hr class="divider divider-decorate">
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/auto5.jpg" alt="">
-                            <!-- <a href="#" class="btn theme_btn button_hover">Book Now</a> -->
+                <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">view all tours</a></div>
+            </div>
+            <div class="row row-50">
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
-                        <a href="#">
-                            <!-- <h4 class="sec_h4">Honeymoon Suit</h4> -->
-                        </a>
-                        <!-- <h5>$750<small>/night</small></h5> -->
+                        <div class="event-default-inner">
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+                            
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+                            
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+                            
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+                            
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+                            
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our advantages-->
+    <section class="section section-lg bg-gray-lighter novi-background bg-cover text-center">
+        <div class="container container-wide">
+            <h3>Nuestro Servicios</h3>
+            <div class="divider divider-decorate"></div>
+            <div class="row row-50 justify-content-sm-center text-left">
+                <div class="col-sm-10 col-md-6 col-xl-3">
+                    <article class="box-minimal box-minimal-border">
+                        <div class="box-minimal-icon novi-icon mdi mdi-airplane"></div>
+                        <p class="big box-minimal-title">Air Tickets</p>
+                        <hr>
+                        <div class="box-minimal-text text-spacing-sm">At our travel agency, you can book air tickets to any world destination. We also provide online ticket booking via our website in just a couple of steps.</div>
+                    </article>
+                </div>
+                <div class="col-sm-10 col-md-6 col-xl-3">
+                    <article class="box-minimal box-minimal-border">
+                        <div class="box-minimal-icon novi-icon mdi mdi-map"></div>
+                        <p class="big box-minimal-title">Voyages & Cruises</p>
+                        <hr>
+                        <div class="box-minimal-text text-spacing-sm">Besides regular tours and excursions, we also offer a variety of cruises & sea voyages for different customers looking for awesome experiences.</div>
+                    </article>
+                </div>
+                <div class="col-sm-10 col-md-6 col-xl-3">
+                    <article class="box-minimal box-minimal-border">
+                        <div class="box-minimal-icon novi-icon mdi mdi-city"></div>
+                        <p class="big box-minimal-title">Hotel Bookings</p>
+                        <hr>
+                        <div class="box-minimal-text text-spacing-sm">We offer a wide selection of hotel ranging from 5-star ones to small properties located worldwide so that you could book a hotel you like.</div>
+                    </article>
+                </div>
+                <div class="col-sm-10 col-md-6 col-xl-3">
+                    <article class="box-minimal box-minimal-border">
+                        <div class="box-minimal-icon novi-icon mdi mdi-beach"></div>
+                        <p class="big box-minimal-title">Tailored Summer Tours</p>
+                        <hr>
+                        <div class="box-minimal-text text-spacing-sm">Our agency provides varied tours including tailored summer tours for clients who are searching for an exclusive and memorable vacation.</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & tricks-->
+   
+
+    <section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
+        <div class="container container-bigger">
+            <h3>testimonios</h3>
+            <div class="divider divider-decorate"></div>
+            <!-- Owl Carousel-->
+            <div class="owl-carousel owl-layout-1" data-items="1" data-dots="true" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
+                <article class="quote-boxed">
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-1-210x210.jpg" alt="" width="210" height="210" />
                     </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="accomodation_item text-center">
-                        <div class="hotel_img">
-                            <img src="image/auto5.jpg" alt="">
-                            <!-- <a href="#" class="btn theme_btn button_hover">Book Now</a> -->
+                    <div class="quote-boxed-main">
+                        <div class="quote-boxed-text">
+                            <p>I wanted to thank you very much for planning the trip to France for my boyfriend and me. It was amazing and exceeded my expectations! We had a wonderful time and were very pleased with the accommodations in Paris and Bayeux. Our private/small tour guides were fantastic! I appreciate all the effort to get us to the Eiffel Tower finally. </p>
                         </div>
-                        <a href="#">
-                            <!-- <h4 class="sec_h4">Economy Double</h4> -->
-                        </a>
-                        <!-- <h5>$200<small>/night</small></h5> -->
+                        <div class="quote-boxed-meta">
+                            <p class="quote-boxed-cite">Ann McMillan</p>
+                            <p class="quote-boxed-small">Regular Customer</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="quote-boxed">
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-2-210x210.jpg" alt="" width="210" height="210" />
+                    </div>
+                    <div class="quote-boxed-main">
+                        <div class="quote-boxed-text">
+                            <p>I had a marvelous time in our travels to Madagascar, Zimbabwe and Botswana, I had just wonderful experiences.I loved the location of the Gorges Camp as I felt like it was only the time we got to see real and rural Africans and how they truly lived. The service was amazing and everyone was very attentive!</p>
+                        </div>
+                        <div class="quote-boxed-meta">
+                            <p class="quote-boxed-cite">Debra Ortega</p>
+                            <p class="quote-boxed-small">Regular Customer</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="quote-boxed">
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-3-210x210.jpg" alt="" width="210" height="210" />
+                    </div>
+                    <div class="quote-boxed-main">
+                        <div class="quote-boxed-text">
+                            <p>Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a blast! All of the accommodations were perfect as were the activities that we did (canopy, coffee tour, hikes, fishing, and massages!) We have such fond memories and can't thank you enough!</p>
+                        </div>
+                        <div class="quote-boxed-meta">
+                            <p class="quote-boxed-cite">Samantha Smith</p>
+                            <p class="quote-boxed-small">Regular Customer</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-md text-center text-md-left bg-gray-700 novi-background bg-cover">
+        <div class="container container-wide">
+            <div class="row row-fix row-50 justify-content-sm-center">
+                <div class="col-xxl-8">
+                    <div class="box-cta box-cta-inline">
+                        <div class="box-cta-inner">
+                            <h3 class="box-cta-title">Buy a tour without leaving your home</h3>
+                            <p>Using our website, you can book any tour just in a couple of clicks.</p>
+                        </div>
+                        <div class="box-cta-inner"><a class="button button-secondary button-nina" href="#">Book Now</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--================ Accomodation Area  =================-->
+    <!-- <a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )"><img src="images/banner/foreground-03-1600x310.png" srcset="images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a> -->
 
-    <!--================ About History Area  =================-->
-    <section class="about_history_area section_gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 d_flex align-items-center">
-                    <div class="about_content ">
-                        <h2 class="title title_color">Sobre nosotros<br>Nuestra historia<br>Misión Visión</h2>
-                        <p>
-                         <strong>Bienvenidos a Rodriel Tours – Transporte Turístico</strong><br>
-
-                          En Rodriel Tours, nos dedicamos a ofrecer experiencias de transporte turístico inolvidables. Con años de experiencia en la industria, hemos perfeccionado nuestros servicios para garantizar que cada viaje con nosotros sea cómodo, seguro y lleno de aventuras.
-
-                          Nuestra flota de vehículos modernos y bien mantenidos está diseñada para satisfacer las necesidades de todo tipo de viajeros, ya sean familias, grupos de amigos, o aventureros solitarios. Con conductores profesionales y conocedores de la región, puedes estar seguro de que estás en buenas manos mientras exploras los lugares más hermosos y emblemáticos
-</p>
-                        <a href="about.php" class="btn" style="background-color: #EF4F16; color:#fff">Más Sobre Nosotros</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <img class="img-fluid" src="image/about_bg1.png" alt="img">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================ About History Area  =================-->
-
-    <!--================ Testimonial Area  =================-->
-    <section class="testimonial_area section_gap">
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_color">Testimonial de nuestro Clientes</h2>
-                <!-- <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p> -->
-            </div>
-            <div class="testimonial_slider owl-carousel">
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e7/3d/default-avatar-2020-55.jpg" alt="">
-                    <div class="media-body">
-                        <p>
-                            Me gustó su servicio de trasporte muy puntual el conductor muy amable y simpático lo recomiendo y lo volvería a usar en el futuro
-                        </p>
-                        <a href="https://www.tripadvisor.es/ShowUserReviews-g13199011-d27521919-r945275446-Rodriel_Tours-Santo_Domingo_Este_Santo_Domingo_Province_Dominican_Republic.html">
-                            <h4 class="sec_h4">Felix C</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/carmen-p.jpg" alt="">
-                    <div class="media-body">
-                        <p>Muy buena atención, amables  Fueron puntuales y en todo momento accesibles</p>
-                        <a href="https://www.tripadvisor.es/Profile/836carmenp?fid=42f22415-5251-4c2e-8462-32190a9a201d">
-                            <h4 class="sec_h4">Carmen P</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="media testimonial_item">
-                    <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                    <div class="media-body">
-                        <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                        <a href="#">
-                            <h4 class="sec_h4">Fanny Spencer</h4>
-                        </a>
-                        <div class="star">
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star"></i></a>
-                            <a href="#"><i class="fa fa-star-half-o"></i></a>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!--================ Testimonial Area  =================-->
-
-    <!--================ start footer Area  =================-->
-    <?php require_once('footer.php')  ?>
-    <!--================ End footer Area  =================-->
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="js/custom.js"></script>
-
+    <!-- Footer Minimal-->
+    <?php require_once('footer.php')   ?>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"> </div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- coded by barber-->
 </body>
 
 </html>
