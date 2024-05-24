@@ -34,6 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $total = 0;
     $distance = getDistanceAndTime($destination, $origin, "K");
     $kl = $distance;
+    $page = 'Rodriel Tours';
 
     if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults)) {
         $response['status'] = 'error';
@@ -82,11 +83,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $clientId = $conn->insert_id;
 
         // Insertar en la tabla reservations
-        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate,hour, clientId, airport, hotel,num_air,numChildren,numInfant,Datellegada) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?)");
+        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate,hour, clientId, airport, hotel,num_air,numChildren,numInfant,Datellegada,page) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?,?)");
         if (!$stmt2) {
             throw new Exception("Error en la preparación de la declaración (reservations): " . $conn->error);
         }
-        $stmt2->bind_param("dsiisssisssiis", $total, $kl, $suitcases, $adults, $numeroServicioConLetra, $date1,$hour, $clientId, $destination, $origin, $numVuelo,$children,$infants,$date1);
+        $stmt2->bind_param("dsiisssisssiiss", $total, $kl, $suitcases, $adults, $numeroServicioConLetra, $date1,$hour, $clientId, $destination, $origin, $numVuelo,$children,$infants,$date1,$page);
 
         if (!$stmt2->execute()) {
             throw new Exception("Error al insertar en reservations: " . $stmt2->error);
