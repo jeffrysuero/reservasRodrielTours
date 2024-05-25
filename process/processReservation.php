@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $distance = getDistanceAndTime($destination, $origin, "K");
     $kl = $distance;
     $page = 'Pikuprd Tours';
-    $infants=0;
+  
     if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults)) {
         $response['status'] = 'error';
         $response['message'] = 'Todos los campos obligatorios deben ser completados.';
