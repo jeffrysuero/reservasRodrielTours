@@ -90,16 +90,16 @@
     <!-- our team-->
     <section class="section section-lg text-center novi-background bg-cover">
       <div class="container container-wide">
-        <h3>MEET OUR TEAM</h3>
+        <h3>CONOZCA A NUESTRO EQUIPO</h3>
         <div class="divider divider-decorate"></div>
         <div class="row row-50 row-xxl-90 justify-content-sm-center offset-custom-2">
           <div class="col-md-6 col-lg-3">
             <div class="team-classic team-classic-circle">
-              <figure><img class="rounded-circle" src="images/team-07-300x300.jpg" alt="" width="300" height="300" />
+              <figure><img class="rounded-circle" src="images/andy2.jpeg" alt="" width="300" height="300" />
               </figure>
               <div class="team-classic-caption">
-                <h5><a class="team-classic-title" href="#">Sandra Ferguson</a></h5>
-                <p class="team-classic-job-position">Founder, Director</p>
+                <h5><a class="team-classic-title" href="#">Andriel</a></h5>
+                <p class="team-classic-job-position">Gerente General</p>
                 <ul class="list-inline list-team">
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>
@@ -112,11 +112,11 @@
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="team-classic team-classic-circle">
-              <figure><img class="rounded-circle" src="images/team-08-300x300.jpg" alt="" width="300" height="300" />
+              <figure><img class="rounded-circle" src="images/photoRafael.jpeg" alt="" width="300" height="300" />
               </figure>
               <div class="team-classic-caption">
-                <h5><a class="team-classic-title" href="#">Ronald Chen</a></h5>
-                <p class="team-classic-job-position">Tour Manager</p>
+                <h5><a class="team-classic-title" href="#">Rafael Salado</a></h5>
+                <p class="team-classic-job-position">Coordinador</p>
                 <ul class="list-inline list-team">
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>
@@ -129,11 +129,11 @@
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="team-classic team-classic-circle">
-              <figure><img class="rounded-circle" src="images/team-09-300x300.jpg" alt="" width="300" height="300" />
+              <figure><img class="rounded-circle" src="images/photojeffry.jpeg" alt="" width="300" height="300" />
               </figure>
               <div class="team-classic-caption">
-                <h5><a class="team-classic-title" href="#">Frances Watson</a></h5>
-                <p class="team-classic-job-position">Travel Agent</p>
+                <h5><a class="team-classic-title" href="#">Jeffry Suero</a></h5>
+                <p class="team-classic-job-position">Encangado de Tecnologia</p>
                 <ul class="list-inline list-team">
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
                   <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>

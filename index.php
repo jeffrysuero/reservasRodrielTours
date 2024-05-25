@@ -1,3 +1,13 @@
+<?php
+require __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+// Carga el archivo .env desde el directorio padre
+$dotenv = Dotenv::createImmutable(__DIR__ . '/');
+$dotenv->load();
+?>
+
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
 
@@ -18,6 +28,114 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"> </script>
 		<![endif]-->
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $_ENV['MAP_KEY']; ?>&callback=initMap&libraries=places&v=weekly" defer></script>
+    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        #extraFields {
+            display: none;
+        }
+
+        .span-button {
+            cursor: pointer;
+        }
+    </style>
+    <style type="text/css">
+        #map {
+            height: 500px;
+            width: 800px;
+            border-radius: 15px;
+            margin: 100px auto;
+        }
+    </style>
+    <script>
+        let timer;
+
+        function initMap() {
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            const directionsService = new google.maps.DirectionsService();
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: {
+                    lat: 18.7357,
+                    lng: -70.1627
+                },
+            });
+
+            directionsRenderer.setMap(map);
+
+            // Llama a la función para calcular y mostrar la ruta cuando la página se carga
+            calculateAndDisplayRoute(directionsService, directionsRenderer);
+
+            // Agrega autocompletado a los campos de entrada de origen y destino
+            const originInput = document.getElementById('destination');
+            const destinationInput = document.getElementById('origin');
+            const originAutocomplete = new google.maps.places.Autocomplete(originInput);
+            const destinationAutocomplete = new google.maps.places.Autocomplete(destinationInput);
+
+            originAutocomplete.bindTo('bounds', map);
+            destinationAutocomplete.bindTo('bounds', map);
+
+            // Agrega eventos de escucha para los cambios en los campos de entrada
+            originAutocomplete.addListener('place_changed', function() {
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    geocodeAddress(originInput.value, function(coordinates) {
+                        calculateAndDisplayRoute(directionsService, directionsRenderer, coordinates);
+                    });
+                }, 500); // Retraso de 500ms antes de realizar la búsqueda
+            });
+
+            destinationAutocomplete.addListener('place_changed', function() {
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    geocodeAddress(destinationInput.value, function(coordinates) {
+                        calculateAndDisplayRoute(directionsService, directionsRenderer, coordinates);
+                    });
+                }, 500); // Retraso de 500ms antes de realizar la búsqueda
+            });
+        }
+
+        function geocodeAddress(address, callback) {
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+                address: address
+            }, function(results, status) {
+                if (status === "OK") {
+                    const location = results[0].geometry.location;
+                    const coordinates = {
+                        lat: location.lat(),
+                        lng: location.lng()
+                    };
+                    callback(coordinates);
+                } else {
+                    console.log("Geocode was not successful for the following reason: " + status);
+                }
+            });
+        }
+
+        function calculateAndDisplayRoute(directionsService, directionsRenderer, coordinates) {
+            // Obtiene los valores de los inputs de origen y destino
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+
+            // Realiza la solicitud de dirección
+            directionsService.route({
+                    origin: coordinates || origin,
+                    destination: destination,
+                    travelMode: google.maps.TravelMode["DRIVING"],
+                },
+                (response, status) => {
+                    if (status == "OK") {
+                        directionsRenderer.setDirections(response);
+                    } else {
+                        //   window.alert("Directions request failed due to " + status);
+                    }
+                }
+            );
+        }
+    </script>
 </head>
 
 <body>
@@ -32,40 +150,43 @@
             <!-- Swiper-->
             <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-align-left swiper-align-left-custom context-dark bg-gray-darker" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-1.jpg">
+                    <div class="swiper-slide" data-slide-bg="images/fondo1.JPG">
                         <div class="swiper-slide-caption">
                             <div class="container container-bigger swiper-main-section">
                                 <div class="row row-fix justify-content-sm-center justify-content-md-start">
                                     <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                        <h3>Hundreds of Amazing Destinations</h3>
-                                        <div class="divider divider-decorate"></div>
-                                        <p class="text-spacing-sm">We offer a variety of destinations to travel to, ranging from exotic to some extreme ones. They include very popular countries and cities like Paris, Rio de Janeiro, Cairo and a lot of others.</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                        <h3>Explora, Descubre, Viaja Confortablemente con nosotros</h3>
+                                        <!-- <div class="divider divider-decorate"></div> -->
+                                        <p class="text-spacing-sm">Conductores Capacitados para un Viaje Seguro y Confiable.
+                                            Disfrute de Confort, Elegancia y Seguridad en cada trayecto.
+                                            Reserve con Nosotros para una Experiencia de Transporte Inigualable.</p>
+                                        <!-- <a class="button button-default-outline button-nina button-sm" href="#">learn more</a> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-2.jpg">
+                    <div class="swiper-slide" data-slide-bg="images/fondo2.JPG">
                         <div class="swiper-slide-caption">
                             <div class="container container-bigger swiper-main-section">
                                 <div class="row row-fix justify-content-sm-center justify-content-md-start">
                                     <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                        <h3>The Trip of Your Dream</h3>
-                                        <div class="divider divider-decorate"></div>
-                                        <p class="text-spacing-sm">Our travel agency is ready to offer you an exciting vacation that is designed to fit your own needs and wishes. Whether it’s an exotic cruise or a trip to your favorite resort, you will surely have the best experience.</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                        <h3></h3>
+                                        <!-- <div class="divider divider-decorate"></div> -->
+                                        <!-- <p class="text-spacing-sm"></p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide" data-slide-bg="images/swiper-slide-3.jpg">
+                    <div class="swiper-slide" data-slide-bg="images/fondo3.JPG">
                         <div class="swiper-slide-caption">
                             <div class="container container-bigger swiper-main-section">
                                 <div class="row row-fix justify-content-sm-center justify-content-md-start">
                                     <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                        <h3>unique Travel Insights</h3>
-                                        <div class="divider divider-decorate"></div>
-                                        <p class="text-spacing-sm">Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
+                                        <h3></h3>
+                                        <!-- <div class="divider divider-decorate"></div> -->
+                                        <!-- <p class="text-spacing-sm"></p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -87,69 +208,94 @@
                 <div class="row row-fix justify-content-sm-center justify-content-lg-end">
                     <div class="col-lg-6 col-xxl-5">
                         <div class="form-request form-request-modern bg-gray-lighter novi-background">
-                            <h4>Find your Tour</h4>
+                            <h4>Reservacion</h4>
                             <!-- RD Mailform-->
-                            <form class="rd-mailform form-fix">
+                            <form id="reservationForm" class="rd-mailform form-fix">
                                 <div class="row row-20 row-fix">
-                                    <div class="col-sm-12">
-                                        <label class="form-label-outside">From</label>
+                                    <div class="col-sm-4">
+                                        <label class="form-label-outside">Nombre</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
-                                                <option value="1">New York</option>
-                                                <option value="2">Lisbon</option>
-                                                <option value="3">Stockholm</option>
-                                            </select>
+                                            <input type="text" name="name" id="name" class="form-input input-append" required placeholder="Nombre">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label-outside">Apellido</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="text" name="lastname" id="lastname" class="form-input input-append" required placeholder="Apellido">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label-outside">Telefono</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="tel" name="phone" id="phone" class="form-input input-append" required placeholder="Número de Teléfono">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <label class="form-label-outside">Destino</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="text" name="destination" id="destination" required class="form-input input-append" placeholder="Destino">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <label class="form-label-outside">To</label>
+                                        <label class="form-label-outside">Origen</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
-                                                <option value="1">Chicago</option>
-                                                <option value="2">Madrid</option>
-                                                <option value="3">Paris</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <label class="form-label-outside">Depart Date</label>
-                                        <div class="form-wrap form-wrap-validation">
-                                            <!-- Select -->
-                                            <input class="form-input" id="dateForm" name="date" type="text" data-time-picker="date">
-                                            <label class="form-label" for="dateForm">Choose the date</label>
-                                            <!--select.form-input.select-filter(data-placeholder="All", data-minimum-results-for-search="Infinity",  name='city')-->
-                                            <!--  option(value="1") Choose the date-->
-                                            <!--  option(value="2") Primary-->
-                                            <!--  option(value="3") Middle-->
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 col-lg-6">
-                                        <label class="form-label-outside">Duration</label>
-                                        <div class="form-wrap form-wrap-validation">
-                                            <!-- Select 2-->
-                                            <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
-                                                <option value="1">Any length</option>
-                                                <option value="2">2 days</option>
-                                                <option value="3">3 days</option>
-                                                <option value="4">4 days</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label class="form-label-outside">Adults</label>
-                                        <div class="form-wrap form-wrap-modern">
-                                            <input class="form-input input-append" id="form-element-stepper" type="number" min="0" max="300" value="2">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <label class="form-label-outside">Children</label>
-                                        <div class="form-wrap form-wrap-modern">
-                                            <input class="form-input input-append" id="form-element-stepper-1" type="number" min="0" max="300" value="0">
+                                            <input type="text" name="origin" id="origin" required class="form-input input-append" placeholder="Origen">
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="form-wrap form-button">
-                                    <button class="button button-block button-secondary" type="submit">search flight</button>
+                                    <span id="moreOptionsBtn" class="span-button">Más opciones</span>
+                                </div>
+
+                                <div id="extraFields">
+                                    <div class="row row-20 row-fix">
+
+                                        <div class="col-sm-4">
+                                            <label class="form-label-outside">Hora</label>
+                                            <div class="form-wrap form-wrap-inline">
+                                                <input type="time" name="hour" id="hour" class="form-input input-append" placeholder="Hora">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-lg-4">
+                                            <label class="form-label-outside">Fecha Reserva</label>
+                                            <div class="form-wrap form-wrap-validation">
+                                                <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date">
+                                                <label class="form-label" for="dateForm">Fecha Reserva</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <label class="form-label-outside">Numero de vuelo</label>
+                                            <div class="form-wrap form-wrap-inline">
+                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Número de vuelo">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label class="form-label-outside">Maletas</label>
+                                            <div class="form-wrap form-wrap-modern">
+                                                <!-- <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2"> -->
+                                                <input type='number' name="suitcases" id="suitcases" required class="form-input input-append" min="1" max="300" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label class="form-label-outside">Adultos</label>
+                                            <div class="form-wrap form-wrap-modern">
+                                                <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <label class="form-label-outside">Niños</label>
+                                            <div class="form-wrap form-wrap-modern">
+                                                <input type="number" name="children" id="children" class="form-input input-append" min="0" max="300" value="0">
+                                                <input type="hidden" name="infants" id="infants" class="form-control" placeholder="Número de Infantes (0-2 años)" min="0">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-wrap form-button">
+                                    <button type="button" id="submitBtn" class="button button-block button-secondary">Reservar</button>
                                 </div>
                             </form>
                         </div>
@@ -158,6 +304,34 @@
             </div>
         </div>
     </section>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Trayectoria a Recorrer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
+                            <div class="">
+                                <!-- <span> Total a Pagar $200 usd</span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" id="confirmBtn" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section class="section section-variant-1 bg-default novi-background bg-cover">
         <div class="container container-wide">
@@ -190,7 +364,7 @@
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
                         <div class="event-default-inner">
-                            
+
                         </div>
                     </article>
                 </div>
@@ -202,7 +376,7 @@
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
                         <div class="event-default-inner">
-                            
+
                         </div>
                     </article>
                 </div>
@@ -214,7 +388,7 @@
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
                         <div class="event-default-inner">
-                            
+
                         </div>
                     </article>
                 </div>
@@ -226,7 +400,7 @@
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
                         <div class="event-default-inner">
-                            
+
                         </div>
                     </article>
                 </div>
@@ -238,7 +412,7 @@
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
                         <div class="event-default-inner">
-                            
+
                         </div>
                     </article>
                 </div>
@@ -289,7 +463,7 @@
     </section>
 
     <!-- Tips & tricks-->
-   
+
 
     <section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
         <div class="container container-bigger">
@@ -298,41 +472,32 @@
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-layout-1" data-items="1" data-dots="true" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
                 <article class="quote-boxed">
-                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-1-210x210.jpg" alt="" width="210" height="210" />
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="https://media-cdn.tripadvisor.com/media/photo-l/1a/f6/e7/3d/default-avatar-2020-55.jpg" alt="" width="210" height="210" />
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>I wanted to thank you very much for planning the trip to France for my boyfriend and me. It was amazing and exceeded my expectations! We had a wonderful time and were very pleased with the accommodations in Paris and Bayeux. Our private/small tour guides were fantastic! I appreciate all the effort to get us to the Eiffel Tower finally. </p>
+                            <p>Me gustó su servicio de trasporte muy puntual el conductor muy amable y simpático lo recomiendo y lo volvería a usar en el futuro</p>
                         </div>
                         <div class="quote-boxed-meta">
-                            <p class="quote-boxed-cite">Ann McMillan</p>
-                            <p class="quote-boxed-small">Regular Customer</p>
+                            <a href="https://www.tripadvisor.es/ShowUserReviews-g13199011-d27521919-r945275446-Rodriel_Tours-Santo_Domingo_Este_Santo_Domingo_Province_Dominican_Republic.html">
+                                <p class="quote-boxed-cite">Felix C</p>
+                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                            </a>
                         </div>
                     </div>
                 </article>
                 <article class="quote-boxed">
-                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-2-210x210.jpg" alt="" width="210" height="210" />
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/carmen-p.jpg" alt="" width="210" height="210" />
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>I had a marvelous time in our travels to Madagascar, Zimbabwe and Botswana, I had just wonderful experiences.I loved the location of the Gorges Camp as I felt like it was only the time we got to see real and rural Africans and how they truly lived. The service was amazing and everyone was very attentive!</p>
+                            <p>Muy buena atención, amables Fueron puntuales y en todo momento accesibles</p>
                         </div>
                         <div class="quote-boxed-meta">
-                            <p class="quote-boxed-cite">Debra Ortega</p>
-                            <p class="quote-boxed-small">Regular Customer</p>
-                        </div>
-                    </div>
-                </article>
-                <article class="quote-boxed">
-                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/quote-user-3-210x210.jpg" alt="" width="210" height="210" />
-                    </div>
-                    <div class="quote-boxed-main">
-                        <div class="quote-boxed-text">
-                            <p>Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a blast! All of the accommodations were perfect as were the activities that we did (canopy, coffee tour, hikes, fishing, and massages!) We have such fond memories and can't thank you enough!</p>
-                        </div>
-                        <div class="quote-boxed-meta">
-                            <p class="quote-boxed-cite">Samantha Smith</p>
-                            <p class="quote-boxed-small">Regular Customer</p>
+                            <a href="https://www.tripadvisor.es/Profile/836carmenp?fid=42f22415-5251-4c2e-8462-32190a9a201d">
+                                <p class="quote-boxed-cite">Carmen P</p>
+                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                            </a>
                         </div>
                     </div>
                 </article>
@@ -356,7 +521,17 @@
         </div>
     </section>
     <!-- <a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )"><img src="images/banner/foreground-03-1600x310.png" srcset="images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a> -->
+    <section style="display: none;" class="accomodation_area section_gap">
+        <div class="container">
+            <div class="section_title text-center">
+                <h2 class="title_color">Trayectoria a Recorrer</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
+            </div>
 
+        </div>
+    </section>
     <!-- Footer Minimal-->
     <?php require_once('footer.php')   ?>
     </div>
@@ -366,6 +541,94 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <!-- coded by barber-->
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            var form = document.getElementById('reservationForm');
+
+            // Verificar si el formulario es válido
+            if (form.checkValidity() === false) {
+                // Mostrar mensajes de error por defecto de HTML5
+                form.reportValidity();
+                return;
+            }
+
+            // Abrir el modal si el formulario es válido
+            $('#exampleModal').modal('show');
+        });
+
+        document.getElementById('confirmBtn').addEventListener('click', function() {
+            var form = document.getElementById('reservationForm');
+
+            // Crear objeto FormData y agregar los datos del formulario
+            var formData = new FormData(form);
+
+            // Configurar la solicitud AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'process/processReservation.php', true);
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+            // Manejadores de respuesta
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    try {
+                        var response = JSON.parse(xhr.responseText);
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: response.message,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        form.reset();
+                        $('#exampleModal').modal('hide');
+                    } catch (e) {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: "Error inesperado. Verifica la consola para más detalles.",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        console.error("No se pudo parsear la respuesta como JSON:", e);
+                        console.error("Respuesta recibida:", xhr.responseText);
+                    }
+                } else {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Error en la solicitud AJAX. Verifica la consola para más detalles.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    console.error("Error en la solicitud AJAX:", xhr.status, xhr.statusText);
+                    console.error("Respuesta del servidor:", xhr.responseText);
+                }
+            };
+
+            // Enviar la solicitud
+            xhr.send(formData);
+        });
+    </script>
+    <script>
+        document.getElementById('moreOptionsBtn').addEventListener('click', function() {
+            var extraFields = document.getElementById('extraFields');
+            if (extraFields.style.display === 'none' || extraFields.style.display === '') {
+                extraFields.style.display = 'block';
+                this.textContent = 'Menos opciones';
+            } else {
+                extraFields.style.display = 'none';
+                this.textContent = 'Más opciones';
+            }
+        });
+    </script>
 </body>
 
 </html>
