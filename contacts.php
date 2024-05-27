@@ -35,19 +35,19 @@
           <!-- Box minimal-->
           <article class="box-simple">
             <div class="box-simple-icon novi-icon mdi mdi-map-marker"></div>
-            <h6>Address</h6>
-            <div class="box-simple-text"><a href="#">2130 Fulton Street, Chicago, IL <br> 94117-1080 USA</a></div>
+            <h6>Direccion</h6>
+            <div class="box-simple-text"><a href="#">Calle Libertad #3, La caleta</a></div>
           </article>
         </div>
         <div class="col-sm-6 col-lg-3">
           <!-- Box simple-->
           <article class="box-simple">
             <div class="box-simple-icon novi-icon mdi mdi-phone"></div>
-            <h6>phones</h6>
+            <h6>Telefonos</h6>
             <div class="box-simple-text">
               <ul class="list-comma list-0">
-                <li><a href="tel:#">1-800-6543-765</a></li>
-                <li><a href="tel:#">1-800-3434-876</a></li>
+                <li><a href="tel:#">movil: 849-449-1598</a></li>
+                <li><a href="tel:#">Oficina: 809-532-6645</a></li>
               </ul>
             </div>
           </article>
@@ -59,7 +59,7 @@
             <h6>e-mail</h6>
             <div class="box-simple-text">
               <ul class="list-comma list-0">
-                <li><a href="mailto:#">mail@demolink.org</a></li>
+                <li><a href="mailto:#">info@rodrieltours.com</a></li>
               </ul>
             </div>
           </article>
@@ -68,11 +68,11 @@
           <!-- Box simple-->
           <article class="box-simple">
             <div class="box-simple-icon novi-icon mdi mdi-calendar-clock"></div>
-            <h6>opening hours</h6>
+            <h6>Oficina Hora</h6>
             <div class="box-simple-text">
               <ul class="list-0">
-                <li>Mon–Fri: 9:00 am–6:00 pm</li>
-                <li>Sat–Sun: 11:00 am–4:00 pm</li>
+                <li>Lunes–Sabado: 8:00 am–7:00 pm</li>
+
               </ul>
             </div>
           </article>
@@ -88,9 +88,9 @@
         <div class="row row-fix row-50">
           <div class="col-lg-8 col-xl-7">
             <div class="section-wrap-content section-lg">
-              <h3>Contact us</h3>
+              <h3>Contacta con Nosotro</h3>
               <hr class="divider divider-left divider-secondary">
-              <p class="big">You can contact us any way that is convenient for you. We are available 24/7 via fax or email. You can also use a quick contact form below or visit our office personally.</p>
+              <p class="big">Puede contactarnos de cualquier forma que le resulte conveniente. Estamos disponibles las 24 horas, los 7 días de la semana, por correo electrónico. También puede utilizar el formulario de contacto rápido a continuación o visitar nuestra oficina personalmente.</p>
               <!-- RD Mailform-->
               <form class="rd-mailform" id="contactForm">
                 <div class="row row-fix row-20">
@@ -130,7 +130,7 @@
                   <div class="col-sm-12 offset-custom-1">
                     <div class="form-button">
                       <button class="button button-secondary button-nina" id="confirmBtn" type="submit">send message</button>
-                     
+
                     </div>
                   </div>
                 </div>
@@ -143,17 +143,17 @@
 
       <div id="success" class="modal modal-message fade" role="dialog">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <i class="fa fa-close"></i>
-                    </button>
-                    <h2>Thank you</h2>
-                    <p>Your message is successfully sent...</p>
-                </div>
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="fa fa-close"></i>
+              </button>
+              <h2>Thank you</h2>
+              <p>Your message is successfully sent...</p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
       <div class="section-wrap-aside">
         <!-- RD Google Map-->
@@ -169,7 +169,10 @@
 
   <!-- Page Footer-->
   <!-- Footer Minimal-->
-  <?php require_once('footer.php') ?>
+  <div class="page">
+  /* min-height: 96vh !important;
+    <?php require_once('footer.php')   ?>
+  </div>
   </div>
   <!-- Global Mailform Output-->
   <div class="snackbars" id="form-output-global"> </div>

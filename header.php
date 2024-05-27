@@ -8,12 +8,12 @@
                         <ul class="list-inline">
                             <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
                                 <ul class="list-comma">
-                                    <li><a href="tel:#">1-800-1234-567</a></li>
-                                    <li><a href="tel:#">1-800-6780-345</a></li>
+                                    <li><a href="tel:#">movil: 849-449-1598</a></li>
+                                    <li><a href="tel:#">Oficina: 809-532-6645</a></li>
                                 </ul>
                             </li>
-                            <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></li>
-                            <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:#">mail@demolink.org</a></li>
+                            <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">Calle Libertad #3, La caleta</a></li>
+                            <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:#">info@rodrieltours.com</a></li>
                         </ul>
                         <ul class="list-inline">
                             <li class="list-inline-item"><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
@@ -47,7 +47,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div>
+                    <!-- <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div> -->
                 </div>
             </nav>
         </div>

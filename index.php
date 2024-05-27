@@ -227,7 +227,7 @@ $dotenv->load();
                                     <div class="col-sm-4">
                                         <label class="form-label-outside">Telefono</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="tel" name="phone" id="phone" class="form-input input-append" required placeholder="Número de Teléfono">
+                                            <input type="tel" name="phone" id="phone" class="form-input input-append" required placeholder="Teléfono">
                                         </div>
                                     </div>
 
@@ -342,7 +342,7 @@ $dotenv->load();
                     </div>
                     <hr class="divider divider-decorate">
                 </div>
-                <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">view all tours</a></div>
+                <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">Reservar</a></div>
             </div>
             <div class="row row-50">
                 <div class="col-md-6 col-xl-4">
@@ -429,33 +429,39 @@ $dotenv->load();
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
                         <div class="box-minimal-icon novi-icon mdi mdi-airplane"></div>
-                        <p class="big box-minimal-title">Air Tickets</p>
+                        <p class="big box-minimal-title">Traslados al Aeropuerto</p>
                         <hr>
-                        <div class="box-minimal-text text-spacing-sm">At our travel agency, you can book air tickets to any world destination. We also provide online ticket booking via our website in just a couple of steps.</div>
+                        <div class="box-minimal-text text-spacing-sm">
+                            Viaja sin preocupaciones al aeropuerto con nuestro servicio de traslado puntual y confiable. Nos aseguramos de que llegues a tiempo para tu vuelo y te recibimos a tu llegada para un viaje relajado desde el aeropuerto a tu destino.
+                        </div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
-                        <div class="box-minimal-icon novi-icon mdi mdi-map"></div>
-                        <p class="big box-minimal-title">Voyages & Cruises</p>
+                        <div class="box-minimal-icon novi-icon mdi mdi-car"></div>
+                        <p class="big box-minimal-title">Servicios de Taxi</p>
                         <hr>
-                        <div class="box-minimal-text text-spacing-sm">Besides regular tours and excursions, we also offer a variety of cruises & sea voyages for different customers looking for awesome experiences.</div>
+                        <div class="box-minimal-text text-spacing-sm">
+                            Disfruta de un servicio de taxi rápido y eficiente para tus desplazamientos diarios. Ya sea un viaje corto en la ciudad o un traslado a otra localidad, nuestros conductores profesionales te llevarán a tu destino de manera segura y cómoda.</div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
-                        <div class="box-minimal-icon novi-icon mdi mdi-city"></div>
-                        <p class="big box-minimal-title">Hotel Bookings</p>
+                        <div class="box-minimal-icon novi-icon mdi mdi-headset"></div>
+                        <p class="big box-minimal-title">Atención al Cliente 24/7</p>
                         <hr>
-                        <div class="box-minimal-text text-spacing-sm">We offer a wide selection of hotel ranging from 5-star ones to small properties located worldwide so that you could book a hotel you like.</div>
+                        <div class="box-minimal-text text-spacing-sm">
+                            Nuestro servicio de atención al cliente está disponible las 24 horas del día, los 7 días de la semana. Estamos siempre listos para asistirte con cualquier consulta, cambio en tu itinerario o asistencia en caso de emergencia.</div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
-                        <div class="box-minimal-icon novi-icon mdi mdi-beach"></div>
-                        <p class="big box-minimal-title">Tailored Summer Tours</p>
+                        <div class="box-minimal-icon novi-icon mdi mdi-calendar-clock"></div>
+                        <p class="big box-minimal-title">Reservas Personalizadas</p>
                         <hr>
-                        <div class="box-minimal-text text-spacing-sm">Our agency provides varied tours including tailored summer tours for clients who are searching for an exclusive and memorable vacation.</div>
+                        <div class="box-minimal-text text-spacing-sm">
+                            En Rodriel Tours, entendemos que cada cliente tiene necesidades únicas y específicas cuando se trata de transporte. Por ello, ofrecemos un servicio de reservas personalizadas que se adapta a tus horarios, preferencias y requisitos especiales
+                        </div>
                     </article>
                 </div>
             </div>
@@ -511,8 +517,8 @@ $dotenv->load();
                 <div class="col-xxl-8">
                     <div class="box-cta box-cta-inline">
                         <div class="box-cta-inner">
-                            <h3 class="box-cta-title">Buy a tour without leaving your home</h3>
-                            <p>Using our website, you can book any tour just in a couple of clicks.</p>
+                            <h3 class="box-cta-title">RESERVA CON NOSOTRO SIN SALIR DE CASA</h3>
+                            <p>Usando nuestro sitio web, puedes reservar con solo un par de clics</p>
                         </div>
                         <div class="box-cta-inner"><a class="button button-secondary button-nina" href="#">Book Now</a></div>
                     </div>
@@ -521,6 +527,14 @@ $dotenv->load();
         </div>
     </section>
     <!-- <a class="section section-banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" style="background-image: url(images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(images/banner/background-03-1920x310.jpg) 1x, url(images/banner/background-03-3840x620.jpg) 2x )"><img src="images/banner/foreground-03-1600x310.png" srcset="images/banner/foreground-03-1600x310.png 1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a> -->
+    <!-- Footer Minimal-->
+    <div class="page">
+
+        <?php require_once('footer.php')   ?>
+    </div>
+
+    </div>
+
     <section style="display: none;" class="accomodation_area section_gap">
         <div class="container">
             <div class="section_title text-center">
@@ -532,11 +546,8 @@ $dotenv->load();
 
         </div>
     </section>
-    <!-- Footer Minimal-->
-    <?php require_once('footer.php')   ?>
-    </div>
     <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"> </div>
+    <!-- <div class="snackbars" id="form-output-global"> </div> -->
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
