@@ -63,7 +63,7 @@
    
 
     <!-- our team-->
-    <section class="section section-lg text-center novi-background bg-cover">
+    <!-- <section class="section section-lg text-center novi-background bg-cover">
       <div class="container container-wide">
         <h3>CONOZCA A NUESTRO EQUIPO</h3>
         <div class="divider divider-decorate"></div>
@@ -139,10 +139,10 @@
           
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Our history-->
-    <section class="section section-lg bg-gray-700 novi-background bg-cover">
+    <!-- <section class="section section-lg bg-gray-700 novi-background bg-cover">
       <div class="container container-bigger">
         <div class="row row-fix row-50 justify-content-sm-center justify-content-xl-between">
           <div class="col-sm-10 col-md-12 col-xl-7">
@@ -161,7 +161,7 @@
                   <div class="unit-body">
                     <div class="time-line-content wow fadeInRight" data-wow-delay=".6s">
                       <h5>Rodriel Tours fue fundada en 2015 con el objetivo de proporcionar un servicio de taxi confiable y eficiente en la región. Desde sus inicios, la agencia se ha comprometido a ofrecer una experiencia de viaje cómoda y segura a sus clientes.</h5>
-                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p> -->
+                      
                     </div>
                   </div>
                 </div>
@@ -176,7 +176,7 @@
                   <div class="unit-body">
                     <div class="time-line-content wow fadeInRight" data-wow-delay=".7s">
                       <h5>Rodriel Tours amplió sus servicios a nuevas regiones en 2022, llevando su compromiso con la calidad y la seguridad a un público más amplio. La expansión regional permitió a la agencia consolidar su presencia en el mercado y atender a más clientes</h5>
-                      <!-- <p>Aenean et tortor at risus viverra adipiscing at in tellus. Nam aliquam sem et tortor consequat id porta nibh venenatis. Eu lobortis elementum nibh tellus. Id eu nisl nunc mi. </p> -->
+                    
                     </div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@
                   <div class="unit-body">
                     <div class="time-line-content wow fadeInRight" data-wow-delay=".8s">
                       <h5>Con una sólida trayectoria de crecimiento y mejora continua, Rodriel Tours sigue mirando hacia el futuro con planes de ampliar aún más sus servicios, introducir nuevas tecnologías y continuar brindando una experiencia de transporte de primera clase a sus valiosos clientes</h5>
-                      <!-- <p>Malesuada fames ac turpis egestas sed tempus urna et pharetra. Cursus mattis molestie a iaculis at erat pellentesque. Turpis in eu mi bibendum neque egestas congue quisque</p> -->
+                     
                     </div>
                   </div>
                 </div>
@@ -210,10 +210,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Projects-->
-    <section class="section section-lg bg-gray-lighter text-center novi-background bg-cover">
+    <!-- <section class="section section-lg bg-gray-lighter text-center novi-background bg-cover">
       <div class="container container-wide">
         <div class="row row-fix row-50 justify-content-md-center">
           <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
@@ -286,10 +286,10 @@ Rodriel Tours se enorgullece de ofrecer servicios de transporte de alta calidad 
             </a>
             <div class="titled-gallery-caption"><a href="#">Puerto Plata</a></div>
           </div>
-          <!-- <div class="col-12"><a class="button button-secondary button-nina" href="#">view all Destinations</a></div> -->
+     
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- CTA Gradient-->
     <section class="section section-xs text-center bg-gray-700 novi-background bg-cover">

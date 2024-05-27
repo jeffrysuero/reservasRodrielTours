@@ -268,7 +268,7 @@ $dotenv->load();
                                         <div class="col-sm-4">
                                             <label class="form-label-outside">Numero de vuelo</label>
                                             <div class="form-wrap form-wrap-inline">
-                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Número de vuelo">
+                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="vuelo">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
@@ -348,7 +348,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="images/auto1.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
@@ -359,19 +359,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
-                            </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-                        </div>
-                        <div class="event-default-inner">
-
-                        </div>
-                    </article>
-                </div>
-                <div class="col-md-6 col-xl-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="images/auto6.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
@@ -383,7 +371,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="images/auto10.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
@@ -395,7 +383,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="images/auto7.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
@@ -407,7 +395,19 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="images/auto5.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="images/auto8.jpg" alt="" width="570" height="370" />
+                            </figure>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
+                        </div>
+                        <div class="event-default-inner">
+
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-xl-4">
+                    <article class="event-default-wrap">
+                        <div class="event-default">
+                            <figure class="event-default-image"><img src="images/auto11.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
@@ -502,6 +502,40 @@ $dotenv->load();
                         <div class="quote-boxed-meta">
                             <a href="https://www.tripadvisor.es/Profile/836carmenp?fid=42f22415-5251-4c2e-8462-32190a9a201d">
                                 <p class="quote-boxed-cite">Carmen P</p>
+                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="quote-boxed">
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/testim1.png" alt="" width="210" height="210" />
+                    </div>
+                    <div class="quote-boxed-main">
+                        <div class="quote-boxed-text">
+                            <p>Exelente confiable y muy seguro con una experiencia increíble son las palabras que definen los traslados y excursiones.</p>
+                        </div>
+                        <div class="quote-boxed-meta">
+                            <a href="https://www.google.com/maps/contrib/113337780061978184172/reviews/@18.5731351,-69.936854,11z/data=!4m3!8m2!3m1!1e1?entry=ttu">
+                                <p class="quote-boxed-cite">Juniorpaulino Delacruzpaulino</p>
+                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="quote-boxed">
+                    <div class="quote-boxed-aside"><img class="quote-boxed-image" src="images/testim2.png" alt="" width="210" height="210" />
+                    </div>
+                    <div class="quote-boxed-main">
+                        <div class="quote-boxed-text">
+                            <p>Excelente servicio, totalmente recomendable, muy amables y muy buena disposición, excelentes excursiones las que realiza.
+                                yo tuve un problema con nuestro traslado y el sr Andy lo soluciono y llegamos a destino, muy puntuales y responsables.....totalmente responsables. Un 10
+                            </p>
+                        </div>
+                        <div class="quote-boxed-meta">
+                            <a href="https://www.google.com/maps/contrib/113648382259471318522/reviews/@18.5703226,-69.0707497,10z/data=!4m3!8m2!3m1!1e1?entry=ttu">
+                                <p class="quote-boxed-cite">Brisa Castillo</p>
                                 <!-- <p class="quote-boxed-small">Regular Customer</p> -->
                             </a>
                         </div>
