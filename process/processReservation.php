@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $total = 0;
     $distance = getDistanceAndTime($destination, $origin, "K");
     $kl = $distance;
-    $page = 'Pikuprd Tours';
+    $page = 'Rodriel Tours';
   
     if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults)) {
         $response['status'] = 'error';
