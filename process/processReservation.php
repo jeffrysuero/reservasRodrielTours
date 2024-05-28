@@ -15,10 +15,8 @@ $dotenv->load();
 
 $response = array();
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Capturar y sanitizar los datos
-
     $name = htmlspecialchars($_POST['name']);
     $lastname = htmlspecialchars($_POST['lastname']);
     $phone = htmlspecialchars($_POST['phone']);
@@ -26,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $destination = htmlspecialchars($_POST['destination']);
     $origin = htmlspecialchars($_POST['origin']);
     $date1 = htmlspecialchars($_POST['date1']);
-    // $departure_date = htmlspecialchars($_POST['departure_date']);
     $suitcases = htmlspecialchars($_POST['suitcases']);
     $adults = htmlspecialchars($_POST['adults']);
     $children = htmlspecialchars($_POST['children']);
@@ -52,14 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Crear conexión
     $conn = new mysqli($servername, $username, $password, $dbname);
-    echo '<script> console.log("' . $conn . '")</script>';
+
     // Verificar conexión
     if ($conn->connect_error) {
         $response['success'] = false;
         $response['message'] = "Conexión fallida: " . $conn->connect_error;
         echo json_encode($response);
         exit();
+    }else {
+        // Puedes usar un log en PHP para depuración
+        error_log("Conexión a la base de datos exitosa");
     }
+
     // Iniciar una transacción
     $conn->begin_transaction();
 
@@ -84,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $clientId = $conn->insert_id;
 
         // Insertar en la tabla reservations
-        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate,hour, clientId, airport, hotel,num_air,numChildren,numInfant,Datellegada,page) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?)");
+        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate, hour, clientId, airport, hotel, num_air, numChildren, numInfant, Datellegada, page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         if (!$stmt2) {
             throw new Exception("Error en la preparación de la declaración (reservations): " . $conn->error);
         }
