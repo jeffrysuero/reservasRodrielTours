@@ -4,8 +4,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require __DIR__ .'/getDistance.php';
+require __DIR__ . '/getDistance.php';
 require __DIR__ . '/../vendor/autoload.php';
+
 use Dotenv\Dotenv;
 
 // Carga el archivo .env desde el directorio padre
@@ -35,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $distance = getDistanceAndTime($destination, $origin, "K");
     $kl = $distance;
     $page = 'Rodriel Tours';
-  
+
     if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults)) {
         $response['status'] = 'error';
         $response['message'] = 'Todos los campos obligatorios deben ser completados.';
@@ -51,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Crear conexión
     $conn = new mysqli($servername, $username, $password, $dbname);
-
+    echo '<script> console.log("' . $conn . '")</script>';
     // Verificar conexión
     if ($conn->connect_error) {
         $response['success'] = false;
@@ -87,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!$stmt2) {
             throw new Exception("Error en la preparación de la declaración (reservations): " . $conn->error);
         }
-        $stmt2->bind_param("dsiisssisssiiss", $total, $kl, $suitcases, $adults, $numeroServicioConLetra, $date1,$hour, $clientId, $destination, $origin, $numVuelo,$children,$infants,$date1,$page);
+        $stmt2->bind_param("dsiisssisssiiss", $total, $kl, $suitcases, $adults, $numeroServicioConLetra, $date1, $hour, $clientId, $destination, $origin, $numVuelo, $children, $infants, $date1, $page);
 
         if (!$stmt2->execute()) {
             throw new Exception("Error al insertar en reservations: " . $stmt2->error);
