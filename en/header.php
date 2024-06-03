@@ -8,11 +8,11 @@
                     <ul class="list-inline">
                         <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
                             <ul class="list-comma">
-                                <li><a href="tel:#">movil: 849-449-1598</a></li>
-                                <li><a href="tel:#">Oficina: 809-532-6645</a></li>
+                                <li><a href="tel:#">Mobile: 849-449-1598</a></li>
+                                <li><a href="tel:#">Office: 809-532-6645</a></li>
                             </ul>
                         </li>
-                        <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">Calle Libertad #3, La caleta</a></li>
+                        <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">Libertad Street #3, La Caleta</a></li>
                         <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:#">info@rodrieltours.com</a></li>
                     </ul>
                     <ul class="list-inline">
@@ -27,7 +27,7 @@
                         <ul class="dropdown-content" id="dropdown-content"></ul>
                     </div>
                 </div>
-                <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="images/logor.png" target="_blank">buy template now</a></div>
+                <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="../images/logor.png" target="_blank">buy template now</a></div>
             </div>
             <div class="rd-navbar-inner">
                 <!-- RD Navbar Panel-->
@@ -35,23 +35,18 @@
                     <!-- RD Navbar Toggle-->
                     <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                     <!-- RD Navbar Brand-->
-                    <div class="rd-navbar-brand"><a class="brand-name" href="index.php"><img class="logo-default" src="images/logor.png" alt="" width="208" height="46" /><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="208" height="46" /></a></div>
+                    <div class="rd-navbar-brand"><a class="brand-name" href="index.php"><img class="logo-default" src="../images/logor.png" alt="" width="208" height="46" /><img class="logo-inverse" src="images/logo-inverse-208x46.png" alt="" width="208" height="46" /></a></div>
                 </div>
                 <div class="rd-navbar-aside-center">
                     <div class="rd-navbar-nav-wrap">
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav">
-                            <li class="active"><a href="index.php">Inicio</a>
-                            </li>
-                            <li><a href="about-us.php">Sobre Nosotro</a>
-                            </li>
-                            <li><a href="contacts.php">Contactos</a>
-                            </li>
-
+                            <li class="active"><a href="index.php">Home</a></li>
+                            <li><a href="about-us.php">About Us</a></li>
+                            <li><a href="contacts.php">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div> -->
             </div>
         </nav>
     </div>

@@ -12078,6 +12078,7 @@ html[class*="ie"] .dtp-hand, html[class*="ie"] .dtp-hour-hand {
 .rd-navbar-fixed .rd-navbar-brand img {
 	max-width: 143px;
 	height: auto;
+	max-height:57px !important;
 }
 
 .rd-navbar-fixed .rd-navbar-panel {
