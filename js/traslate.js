@@ -49,9 +49,9 @@ function setSelectedLocale(locale, isUserAction = false) {
     // Manejar la redirección según el idioma seleccionado si es una acción del usuario
     if (isUserAction) {
         if (locale === 'en-GB') {
-            location.href = '/reservasRodrielTours/en/index.php';
+            location.href = '/en/index.php';
         } else {
-            location.href = '/reservasRodrielTours/index.php';
+            location.href = '/index.php';
         }
     }
 }
