@@ -10,11 +10,7 @@ const dropdownBtn = document.getElementById("dropdown-btn");
 const dropdownContent = document.getElementById("dropdown-content");
 
 function setSelectedLocale(locale, isUserAction = false) {
-    console.log("🚀 ~ setSelectedLocale ~ locale:", locale);
-
     const intlLocale = new Intl.Locale(locale);
-    console.log("🚀 ~ setSelectedLocale ~ intlLocale:", intlLocale.baseName);
-
     const langName = new Intl.DisplayNames([locale], {
         type: "language",
     }).of(intlLocale.language);
