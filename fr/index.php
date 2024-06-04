@@ -138,7 +138,7 @@ $dotenv->load();
             );
         }
     </script>
-     <style>
+    <style>
         .btn-wsp {
             position: fixed;
             width: 60px;
@@ -177,11 +177,11 @@ $dotenv->load();
                             <div class="container container-bigger swiper-main-section">
                                 <div class="row row-fix justify-content-sm-center justify-content-md-start">
                                     <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                        <h3>Explore, Discover, Travel Comfortably with us</h3>
+                                        <h3>Explorez, découvrez, voyagez confortablement avec nous</h3>
                                         <!-- <div class="divider divider-decorate"></div> -->
-                                        <p class="text-spacing-sm">Trained Drivers for a Safe and Reliable Trip.
-                                            Enjoy Comfort, Elegance, and Safety in every journey.
-                                            Book with Us for an Unmatched Transport Experience.</p>
+                                        <p class="text-spacing-sm">Chauffeurs formés pour un voyage sûr et fiable.
+                                            Profitez de confort, d'élégance et de sécurité à chaque voyage.
+                                            Réservez avec nous pour une expérience de transport inégalée.</p>
                                         <!-- <a class="button button-default-outline button-nina button-sm" href="#">learn more</a> -->
                                     </div>
                                 </div>
@@ -230,26 +230,26 @@ $dotenv->load();
                 <div class="row row-fix justify-content-sm-center justify-content-lg-end">
                     <div class="col-lg-6 col-xxl-5">
                         <div class="form-request form-request-modern bg-gray-lighter novi-background">
-                            <h4>Reservation</h4>
+                            <h4>Réservation</h4>
                             <!-- RD Mailform-->
                             <form id="reservationForm" class="rd-mailform form-fix">
                                 <div class="row row-20 row-fix">
                                     <div class="col-sm-4">
-                                        <label class="form-label-outside">First Name</label>
+                                        <label class="form-label-outside">Prénom</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="text" name="name" id="name" class="form-input input-append" required placeholder="First Name">
+                                            <input type="text" name="name" id="name" class="form-input input-append" required placeholder="Prénom">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label-outside">Last Name</label>
+                                        <label class="form-label-outside">Nom de famille</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="text" name="lastname" id="lastname" class="form-input input-append" required placeholder="Last Name">
+                                            <input type="text" name="lastname" id="lastname" class="form-input input-append" required placeholder="Nom de famille">
                                         </div>
                                     </div>
                                     <div class="col-sm-4">
-                                        <label class="form-label-outside">Phone</label>
+                                        <label class="form-label-outside">Téléphone</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="tel" name="phone" id="phone" class="form-input input-append" required placeholder="Phone">
+                                            <input type="tel" name="phone" id="phone" class="form-input input-append" required placeholder="Téléphone">
                                         </div>
                                     </div>
 
@@ -260,64 +260,63 @@ $dotenv->load();
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <label class="form-label-outside">Origin</label>
+                                        <label class="form-label-outside">Origine</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="text" name="origin" id="origin" required class="form-input input-append" placeholder="Origin">
+                                            <input type="text" name="origin" id="origin" required class="form-input input-append" placeholder="Origine">
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-wrap form-button">
-                                    <span id="moreOptionsBtn" class="span-button">More options</span>
+                                    <span id="moreOptionsBtn" class="span-button">Plus d'options</span>
                                 </div>
 
                                 <div id="extraFields">
                                     <div class="row row-20 row-fix">
 
                                         <div class="col-sm-4">
-                                            <label class="form-label-outside">Time</label>
+                                            <label class="form-label-outside">Heure</label>
                                             <div class="form-wrap form-wrap-inline">
-                                                <input type="time" name="hour" id="hour" class="form-input input-append" placeholder="Time">
+                                                <input type="time" name="hour" id="hour" class="form-input input-append" placeholder="Heure">
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-lg-4">
-                                            <label class="form-label-outside">Reservation Date</label>
+                                            <label class="form-label-outside">Date de réservation</label>
                                             <div class="form-wrap form-wrap-validation">
                                                 <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date">
-                                                <label class="form-label" for="dateForm">Reservation Date</label>
+                                                <label class="form-label" for="dateForm">Date de réservation</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-4">
-                                            <label class="form-label-outside">Flight Number</label>
+                                            <label class="form-label-outside">Numéro de vol</label>
                                             <div class="form-wrap form-wrap-inline">
-                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Flight">
+                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Vol">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label class="form-label-outside">Suitcases</label>
+                                            <label class="form-label-outside">Valises</label>
                                             <div class="form-wrap form-wrap-modern">
-                                                <!-- <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2"> -->
                                                 <input type='number' name="suitcases" id="suitcases" required class="form-input input-append" min="1" max="300" value="2">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label class="form-label-outside">Adults</label>
+                                            <label class="form-label-outside">Adultes</label>
                                             <div class="form-wrap form-wrap-modern">
                                                 <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2">
                                             </div>
                                         </div>
                                         <div class="col-lg-4">
-                                            <label class="form-label-outside">Children</label>
+                                            <label class="form-label-outside">Enfants</label>
                                             <div class="form-wrap form-wrap-modern">
                                                 <input type="number" name="children" id="children" class="form-input input-append" min="0" max="300" value="0">
-                                                <input type="hidden" name="infants" id="infants" class="form-control" placeholder="Number of Infants (0-2 years)" min="0">
+                                                <input type="hidden" name="infants" id="infants" class="form-control" placeholder="Nombre de bébés (0-2 ans)" min="0">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="form-wrap form-button">
-                                    <button type="button" id="submitBtn" class="button button-block button-secondary">Reserve</button>
+                                    <button type="button" id="submitBtn" class="button button-block button-secondary">Réserver</button>
                                 </div>
                             </form>
                         </div>
@@ -328,12 +327,13 @@ $dotenv->load();
     </section>
 
 
+
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Route to Travel</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalLabel">Itinéraire à parcourir</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -342,18 +342,19 @@ $dotenv->load();
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
                             <div class="">
-                                <!-- <span> Total to Pay $200 USD</span> -->
+                                <!-- <span> Total à payer 200 USD</span> -->
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" id="confirmBtn" class="btn btn-primary">Confirm</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" id="confirmBtn" class="btn btn-primary">Confirmer</button>
                 </div>
             </div>
         </div>
     </div>
+
 
 
     <section class="section section-variant-1 bg-default novi-background bg-cover">
@@ -361,11 +362,11 @@ $dotenv->load();
             <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
                 <div class="col-xl-8">
                     <div class="parallax-text-wrap">
-                        <h3>Comfort and Safety</h3><span class="parallax-text">RODRIEL TOURS</span>
+                        <h3>Confort et Sécurité</h3><span class="parallax-text">RODRIEL TOURS</span>
                     </div>
                     <hr class="divider divider-decorate">
                 </div>
-                <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">Reserve</a></div>
+                <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">Réserver</a></div>
             </div>
             <div class="row row-50">
                 <div class="col-md-6 col-xl-4">
@@ -373,7 +374,7 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto1.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
                         </div>
@@ -384,10 +385,9 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto6.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
-
                         </div>
                     </article>
                 </div>
@@ -396,10 +396,9 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto10.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
-
                         </div>
                     </article>
                 </div>
@@ -408,10 +407,9 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto7.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
-
                         </div>
                     </article>
                 </div>
@@ -420,10 +418,9 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto8.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
-
                         </div>
                     </article>
                 </div>
@@ -432,10 +429,9 @@ $dotenv->load();
                         <div class="event-default">
                             <figure class="event-default-image"><img src="../images/auto11.jpg" alt="" width="570" height="370" />
                             </figure>
-                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
+                            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">En savoir plus</a></div>
                         </div>
                         <div class="event-default-inner">
-
                         </div>
                     </article>
                 </div>
@@ -444,55 +440,57 @@ $dotenv->load();
     </section>
 
 
+
     <!-- our advantages-->
     <section class="section section-lg bg-gray-lighter novi-background bg-cover text-center">
         <div class="container container-wide">
-            <h3>Our Services</h3>
+            <h3>Nos Services</h3>
             <div class="divider divider-decorate"></div>
             <div class="row row-50 justify-content-sm-center text-left">
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
                         <div class="box-minimal-icon novi-icon mdi mdi-airplane"></div>
-                        <p class="big box-minimal-title">Airport Transfers</p>
+                        <p class="big box-minimal-title">Transferts Aéroport</p>
                         <hr>
                         <div class="box-minimal-text text-spacing-sm">
-                            Travel without worries to the airport with our punctual and reliable transfer service. We ensure you arrive on time for your flight and greet you upon arrival for a relaxed journey from the airport to your destination.
+                            Voyagez sans souci jusqu'à l'aéroport avec notre service de transfert ponctuel et fiable. Nous vous assurons d'arriver à l'heure pour votre vol et nous vous accueillons à votre arrivée pour un voyage détendu de l'aéroport à votre destination.
                         </div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
                         <div class="box-minimal-icon novi-icon mdi mdi-car"></div>
-                        <p class="big box-minimal-title">Taxi Services</p>
+                        <p class="big box-minimal-title">Services de Taxi</p>
                         <hr>
                         <div class="box-minimal-text text-spacing-sm">
-                            Enjoy a fast and efficient taxi service for your daily commutes. Whether it's a short trip in the city or a transfer to another location, our professional drivers will take you to your destination safely and comfortably.
+                            Profitez d'un service de taxi rapide et efficace pour vos trajets quotidiens. Qu'il s'agisse d'un court trajet en ville ou d'un transfert vers une autre destination, nos chauffeurs professionnels vous emmèneront à votre destination en toute sécurité et confort.
                         </div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
                         <div class="box-minimal-icon novi-icon mdi mdi-headset"></div>
-                        <p class="big box-minimal-title">24/7 Customer Support</p>
+                        <p class="big box-minimal-title">Support Client 24/7</p>
                         <hr>
                         <div class="box-minimal-text text-spacing-sm">
-                            Our customer support service is available 24 hours a day, 7 days a week. We are always ready to assist you with any inquiries, itinerary changes, or emergency assistance.
+                            Notre service client est disponible 24 heures sur 24, 7 jours sur 7. Nous sommes toujours prêts à vous assister pour toute question, changement d'itinéraire ou assistance d'urgence.
                         </div>
                     </article>
                 </div>
                 <div class="col-sm-10 col-md-6 col-xl-3">
                     <article class="box-minimal box-minimal-border">
                         <div class="box-minimal-icon novi-icon mdi mdi-calendar-clock"></div>
-                        <p class="big box-minimal-title">Customized Reservations</p>
+                        <p class="big box-minimal-title">Réservations Personnalisées</p>
                         <hr>
                         <div class="box-minimal-text text-spacing-sm">
-                            At Rodriel Tours, we understand that each customer has unique and specific transportation needs. Therefore, we offer a customized reservation service that adapts to your schedules, preferences, and special requirements.
+                            Chez Rodriel Tours, nous comprenons que chaque client a des besoins de transport uniques et spécifiques. C'est pourquoi nous offrons un service de réservation personnalisé qui s'adapte à vos horaires, préférences et exigences particulières.
                         </div>
                     </article>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <!-- Tips & tricks-->
@@ -500,7 +498,7 @@ $dotenv->load();
 
     <section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
         <div class="container container-bigger">
-            <h3>Testimonials</h3>
+            <h3>Témoignages</h3>
             <div class="divider divider-decorate"></div>
             <!-- Owl Carousel-->
             <div class="owl-carousel owl-layout-1" data-items="1" data-dots="true" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
@@ -509,12 +507,12 @@ $dotenv->load();
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>I liked their transport service very punctual, the driver was very kind and friendly. I recommend it and would use it again in the future.</p>
+                            <p>J'ai aimé leur service de transport très ponctuel, le chauffeur était très aimable et amical. Je le recommande et je l'utiliserai à nouveau à l'avenir.</p>
                         </div>
                         <div class="quote-boxed-meta">
                             <a href="https://www.tripadvisor.es/ShowUserReviews-g13199011-d27521919-r945275446-Rodriel_Tours-Santo_Domingo_Este_Santo_Domingo_Province_Dominican_Republic.html">
                                 <p class="quote-boxed-cite">Felix C</p>
-                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                                <!-- <p class="quote-boxed-small">Client Régulier</p> -->
                             </a>
                         </div>
                     </div>
@@ -524,12 +522,12 @@ $dotenv->load();
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>Very good attention, friendly. They were punctual and accessible at all times.</p>
+                            <p>Très bonne attention, aimable. Ils étaient ponctuels et accessibles à tout moment.</p>
                         </div>
                         <div class="quote-boxed-meta">
                             <a href="https://www.tripadvisor.es/Profile/836carmenp?fid=42f22415-5251-4c2e-8462-32190a9a201d">
                                 <p class="quote-boxed-cite">Carmen P</p>
-                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                                <!-- <p class="quote-boxed-small">Client Régulier</p> -->
                             </a>
                         </div>
                     </div>
@@ -539,12 +537,12 @@ $dotenv->load();
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>Excellent, reliable and very safe with an incredible experience are the words that define the transfers and excursions.</p>
+                            <p>Excellent, fiable et très sûr avec une expérience incroyable, ce sont les mots qui définissent les transferts et les excursions.</p>
                         </div>
                         <div class="quote-boxed-meta">
                             <a href="https://www.google.com/maps/contrib/113337780061978184172/reviews/@18.5731351,-69.936854,11z/data=!4m3!8m2!3m1!1e1?entry=ttu">
                                 <p class="quote-boxed-cite">Juniorpaulino Delacruzpaulino</p>
-                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                                <!-- <p class="quote-boxed-small">Client Régulier</p> -->
                             </a>
                         </div>
                     </div>
@@ -554,13 +552,12 @@ $dotenv->load();
                     </div>
                     <div class="quote-boxed-main">
                         <div class="quote-boxed-text">
-                            <p>Excellent service, totally recommended, very friendly and very willing, excellent excursions they carry out.
-                                I had a problem with our transfer and Mr. Andy solved it, and we reached our destination. Very punctual and responsible. Totally reliable. A 10.</p>
+                            <p>Excellent service, totalement recommandé, très aimable et très disponible, excellentes excursions qu'ils réalisent. J'ai eu un problème avec notre transfert et M. Andy l'a résolu, et nous avons atteint notre destination. Très ponctuel et responsable. Totalement fiable. Un 10.</p>
                         </div>
                         <div class="quote-boxed-meta">
                             <a href="https://www.google.com/maps/contrib/113648382259471318522/reviews/@18.5703226,-69.0707497,10z/data=!4m3!8m2!3m1!1e1?entry=ttu">
                                 <p class="quote-boxed-cite">Brisa Castillo</p>
-                                <!-- <p class="quote-boxed-small">Regular Customer</p> -->
+                                <!-- <p class="quote-boxed-small">Client Régulier</p> -->
                             </a>
                         </div>
                     </div>
@@ -570,21 +567,23 @@ $dotenv->load();
     </section>
 
 
+
     <section class="section section-md text-center text-md-left bg-gray-700 novi-background bg-cover">
         <div class="container container-wide">
             <div class="row row-fix row-50 justify-content-sm-center">
                 <div class="col-xxl-8">
                     <div class="box-cta box-cta-inline">
                         <div class="box-cta-inner">
-                            <h3 class="box-cta-title">BOOK WITH US WITHOUT LEAVING HOME</h3>
-                            <p>Using our website, you can book with just a couple of clicks</p>
+                            <h3 class="box-cta-title">RÉSERVEZ AVEC NOUS SANS QUITTER VOTRE MAISON</h3>
+                            <p>En utilisant notre site web, vous pouvez réserver en seulement quelques clics</p>
                         </div>
-                        <div class="box-cta-inner"><a class="button button-secondary button-nina" href="#">Book Now</a></div>
+                        <div class="box-cta-inner"><a class="button button-secondary button-nina" href="#">Réservez Maintenant</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <a href="https://api.whatsapp.com/send?phone=18293049681" class="btn-wsp" target="_blank">
         <i class="fa fa-whatsapp icono"></i>
@@ -601,7 +600,7 @@ $dotenv->load();
     <section style="display: none;" class="accomodation_area section_gap">
         <div class="container">
             <div class="section_title text-center">
-                <h2 class="title_color">Path to Travel</h2>
+                <h2 class="title_color">Chemin à Parcourir</h2>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
