@@ -138,7 +138,7 @@ $dotenv->load();
             );
         }
     </script>
-     <style>
+    <style>
         .btn-wsp {
             position: fixed;
             width: 60px;
@@ -271,51 +271,6 @@ $dotenv->load();
                                     <span id="moreOptionsBtn" class="span-button">More options</span>
                                 </div>
 
-                                <div id="extraFields">
-                                    <div class="row row-20 row-fix">
-
-                                        <div class="col-sm-4">
-                                            <label class="form-label-outside">Time</label>
-                                            <div class="form-wrap form-wrap-inline">
-                                                <input type="time" name="hour" id="hour" class="form-input input-append" placeholder="Time">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 col-lg-4">
-                                            <label class="form-label-outside">Reservation Date</label>
-                                            <div class="form-wrap form-wrap-validation">
-                                                <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date">
-                                                <label class="form-label" for="dateForm">Reservation Date</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <label class="form-label-outside">Flight Number</label>
-                                            <div class="form-wrap form-wrap-inline">
-                                                <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Flight">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label class="form-label-outside">Suitcases</label>
-                                            <div class="form-wrap form-wrap-modern">
-                                                <!-- <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2"> -->
-                                                <input type='number' name="suitcases" id="suitcases" required class="form-input input-append" min="1" max="300" value="2">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label class="form-label-outside">Adults</label>
-                                            <div class="form-wrap form-wrap-modern">
-                                                <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2">
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-4">
-                                            <label class="form-label-outside">Children</label>
-                                            <div class="form-wrap form-wrap-modern">
-                                                <input type="number" name="children" id="children" class="form-input input-append" min="0" max="300" value="0">
-                                                <input type="hidden" name="infants" id="infants" class="form-control" placeholder="Number of Infants (0-2 years)" min="0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="form-wrap form-button">
                                     <button type="button" id="submitBtn" class="button button-block button-secondary">Reserve</button>
                                 </div>
@@ -329,10 +284,10 @@ $dotenv->load();
 
 
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Route to Travel</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Trayectoria a Recorrer</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -340,9 +295,58 @@ $dotenv->load();
                 <div class="modal-body">
                     <div class="container">
                         <div class="row">
+                            <div>
+                                <div class="row row-20 row-fix">
+                                    <div class="col-sm-12">
+                                        <label class="form-label-outside">Email</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="email" name="email" required id="email" class="form-input input-append" placeholder="Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label-outside">Time</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="time" name="hour" id="hour" class="form-input input-append" placeholder="Time">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-lg-4">
+                                        <label class="form-label-outside">Reservation Date</label>
+                                        <div class="form-wrap form-wrap-validation">
+                                            <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date">
+                                            <label class="form-label" for="dateForm">Reservation Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <label class="form-label-outside">Flight Number</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="text" name="numVuelo" id="numVuelo" class="form-input input-append" placeholder="Flight">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="form-label-outside">Suitcases</label>
+                                        <div class="form-wrap form-wrap-modern">
+                                            <!-- <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2"> -->
+                                            <input type='number' name="suitcases" id="suitcases" required class="form-input input-append" min="1" max="300" value="2">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="form-label-outside">Adults</label>
+                                        <div class="form-wrap form-wrap-modern">
+                                            <input type="number" name="adults" required id="adults" class="form-input input-append" min="1" max="300" value="2">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <label class="form-label-outside">Children</label>
+                                        <div class="form-wrap form-wrap-modern">
+                                            <input type="number" name="children" id="children" class="form-input input-append" min="0" max="300" value="0">
+                                            <input type="hidden" name="infants" id="infants" class="form-control" placeholder="Number of Infants (0-2 years)" min="0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
                             <div class="">
-                                <!-- <span> Total to Pay $200 USD</span> -->
+                                <!-- <span> Total a Pagar $200 usd</span> -->
                             </div>
                         </div>
                     </div>
@@ -634,7 +638,6 @@ $dotenv->load();
                 form.reportValidity();
                 return;
             }
-
             // Abrir el modal si el formulario es válido
             $('#exampleModal').modal('show');
         });
@@ -644,10 +647,31 @@ $dotenv->load();
 
             // Crear objeto FormData y agregar los datos del formulario
             var formData = new FormData(form);
+            var email = document.getElementById('email').value;
+            var hour = document.getElementById('hour').value;
+            var date1 = document.getElementById('dateForm').value;
+            var numVuelo = document.getElementById('numVuelo').value;
+            var suitcases = document.getElementById('suitcases').value;
+            var adults = document.getElementById('adults').value;
+            var children = document.getElementById('children').value;
 
+            // Crear objeto FormData y agregar los datos del formulario y los adicionales
+
+            formData.append('email', email);
+            formData.append('hour', hour);
+            formData.append('date1', date1);
+            if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
+                formData.append('numVuelo', numVuelo);
+            }
+            formData.append('suitcases', suitcases);
+            formData.append('adults', adults);
+            if (children.trim() !== '') {
+
+                formData.append('children', children);
+            }
             // Configurar la solicitud AJAX
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process/processReservation.php', true);
+            xhr.open('POST', '../process/processReservation.php', true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
             // Manejadores de respuesta

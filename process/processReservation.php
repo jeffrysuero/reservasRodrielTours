@@ -20,21 +20,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST['name']);
     $lastname = htmlspecialchars($_POST['lastname']);
     $phone = htmlspecialchars($_POST['phone']);
-    $numVuelo = htmlspecialchars($_POST['numVuelo']);
+    $numVuelo = isset($_POST['numVuelo']) ? htmlspecialchars($_POST['numVuelo']) : '';
     $destination = htmlspecialchars($_POST['destination']);
     $origin = htmlspecialchars($_POST['origin']);
     $date1 = htmlspecialchars($_POST['date1']);
     $suitcases = htmlspecialchars($_POST['suitcases']);
     $adults = htmlspecialchars($_POST['adults']);
     $children = htmlspecialchars($_POST['children']);
-    $infants = htmlspecialchars($_POST['infants']);
+    $infants = isset($_POST['infants']) ? htmlspecialchars($_POST['infants']) : '';
     $hour = htmlspecialchars($_POST['hour']);
+    $email = htmlspecialchars($_POST['email']);
     $total = 0;
     $distance = getDistanceAndTime($destination, $origin, "K");
     $kl = $distance;
     $page = 'Rodriel Tours';
 
-    if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults)) {
+    if (empty($name) || empty($lastname) || empty($phone) || empty($destination) || empty($origin) || empty($date1) || empty($hour) || empty($suitcases) || empty($adults) ||empty($email)) {
         $response['status'] = 'error';
         $response['message'] = 'Todos los campos obligatorios deben ser completados.';
         echo json_encode($response);
@@ -71,11 +72,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $numeroServicioConLetra = $numeroServicio . $letraAleatoria;
 
         // Insertar en la tabla clients
-        $stmt1 = $conn->prepare("INSERT INTO clients (name, lastName, phone) VALUES (?, ?, ?)");
+        $stmt1 = $conn->prepare("INSERT INTO clients (name, lastName, phone,email) VALUES (?, ?, ?, ?)");
         if (!$stmt1) {
             throw new Exception("Error en la preparación de la declaración (clients): " . $conn->error);
         }
-        $stmt1->bind_param("sss", $name, $lastname, $phone);
+        $stmt1->bind_param("ssss", $name, $lastname, $phone, $email);
 
         if (!$stmt1->execute()) {
             throw new Exception("Error al insertar en clients: " . $stmt1->error);
