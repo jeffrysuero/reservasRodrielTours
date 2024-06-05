@@ -8,13 +8,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require __DIR__ . '/getDistance.php';
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../getDistance.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use Dotenv\Dotenv;
 
 // Carga el archivo .env desde el directorio padre
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
 
 $response = array();
@@ -128,28 +128,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isHTML(true); // Set email format to HTML
                 $mail->Subject = 'Reservation';
                 $mail->Body = "
-                    <h1>Confirmación de Recepción de su Reservación</h1>
-                    <p>Nos complace informarle que hemos recibido su reservación. A continuación, encontrará los detalles de la misma:</p>
-                    <ul>
-                        <li><strong>Nombres:</strong> " . htmlspecialchars($name) . "</li>
-                        <li><strong>Apellidos:</strong> " . htmlspecialchars($lastname) . "</li>
-                        <li><strong>Teléfono:</strong> " . htmlspecialchars($phone) . "</li>
-                        <li><strong>Destino:</strong> " . htmlspecialchars($destination) . "</li>
-                        <li><strong>Origen:</strong> " . htmlspecialchars($origin) . "</li>
-                        <li><strong>Número de Reserva:</strong> " . htmlspecialchars($numeroServicioConLetra) . "</li>
-                        <li><strong>Fecha de Reserva:</strong> " . htmlspecialchars($date1) . "</li>
-                        <li><strong>Hora:</strong> " . htmlspecialchars($hour) . "</li>
-                        <li><strong>Número de Vuelo:</strong> " . htmlspecialchars($numVuelo) . "</li>
-                        <li><strong>Maletas:</strong> " . htmlspecialchars($suitcases) . "</li>
-                        <li><strong>Adultos:</strong> " . htmlspecialchars($adults) . "</li>
-                        <li><strong>Niños:</strong> " . htmlspecialchars($children) . "</li>
-                    </ul>
-                    <p>Si necesita realizar algún cambio o tiene alguna pregunta adicional, no dude en contactarnos. Estamos aquí para asegurar que su experiencia sea lo más placentera posible.</p>
-                    <p>Agradecemos su preferencia.</p>
-                    <p>Saludos cordiales,</p>
-                    <p><strong>Empresa:</strong> rodrieltours<br>
-                    <strong>Teléfono:</strong> 809-645-1945<br>
-                    <strong>Correo Electrónico:</strong> info@rodrieltours.com</p>";
+                <h1>Reservation Confirmation</h1>
+                <p>We are pleased to inform you that we have received your reservation. Below are the details:</p>
+                <ul>
+                    <li><strong>First Name:</strong> " . htmlspecialchars($name) . "</li>
+                    <li><strong>Last Name:</strong> " . htmlspecialchars($lastname) . "</li>
+                    <li><strong>Phone:</strong> " . htmlspecialchars($phone) . "</li>
+                    <li><strong>Destination:</strong> " . htmlspecialchars($destination) . "</li>
+                    <li><strong>Origin:</strong> " . htmlspecialchars($origin) . "</li>
+                    <li><strong>Reservation Number:</strong> " . htmlspecialchars($numeroServicioConLetra) . "</li>
+                    <li><strong>Reservation Date:</strong> " . htmlspecialchars($date1) . "</li>
+                    <li><strong>Time:</strong> " . htmlspecialchars($hour) . "</li>
+                    <li><strong>Flight Number:</strong> " . htmlspecialchars($numVuelo) . "</li>
+                    <li><strong>Suitcases:</strong> " . htmlspecialchars($suitcases) . "</li>
+                    <li><strong>Adults:</strong> " . htmlspecialchars($adults) . "</li>
+                    <li><strong>Children:</strong> " . htmlspecialchars($children) . "</li>
+                </ul>
+                <p>If you need to make any changes or have any additional questions, please do not hesitate to contact us. We are here to ensure your experience is as pleasant as possible.</p>
+                <p>We appreciate your preference.</p>
+                <p>Best regards,</p>
+                <p><strong>Company:</strong> rodrieltours<br>
+                <strong>Phone:</strong> 809-645-1945<br>
+                <strong>Email:</strong> info@rodrieltours.com</p>";
 
                 // $mail->AltBody = "$message\n\nFrom: $name ($email)";
 

@@ -697,7 +697,7 @@ $dotenv->load();
             }
             // Configurar la solicitud AJAX
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '../process/processReservation.php', true);
+            xhr.open('POST', '../process/fr/processReservation.php', true);
             xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
             // Manejadores de respuesta
