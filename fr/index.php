@@ -267,9 +267,9 @@ $dotenv->load();
                                     </div>
                                 </div>
 
-                                <div class="form-wrap form-button">
+                                <!-- <div class="form-wrap form-button">
                                     <span id="moreOptionsBtn" class="span-button">Plus d'options</span>
-                                </div>
+                                </div> -->
 
                                 <div class="form-wrap form-button">
                                     <button type="button" id="submitBtn" class="button button-block button-secondary">Réserver</button>
