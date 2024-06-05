@@ -126,6 +126,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->addAddress('info@rodrieltours.com');
                 // Content
                 $mail->isHTML(true); // Set email format to HTML
+                $mail->CharSet = 'UTF-8';
                 $mail->Subject = 'Réservation';
                 $mail->Body = "
                     <h1>Confirmation de Réception de votre Réservation</h1>
