@@ -128,8 +128,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isHTML(true); // Set email format to HTML
                 $mail->CharSet = 'UTF-8';
                 $mail->Subject = 'Réservation';
+                $mail->AddEmbeddedImage('../../images/logor.png', 'logo', 'logor.png');
                 $mail->Body = "
                     <h1>Confirmation de Réception de votre Réservation</h1>
+                    <p><img src='cid:logo' alt='Rodriel Tours' style='width:150px;'></p>
                     <p>Nous avons le plaisir de vous informer que nous avons bien reçu votre réservation. Voici les détails :</p>
                     <ul>
                         <li><strong>Prénom :</strong> " . htmlspecialchars($name) . "</li>
