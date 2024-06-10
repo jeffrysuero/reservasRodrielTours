@@ -137,8 +137,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <li><strong>Prénom :</strong> " . htmlspecialchars($name) . "</li>
                         <li><strong>Nom :</strong> " . htmlspecialchars($lastname) . "</li>
                         <li><strong>Téléphone :</strong> " . htmlspecialchars($phone) . "</li>
-                        <li><strong>Origine :</strong> " . htmlspecialchars($destination) . "</li>
-                        <li><strong>Destination :</strong> " . htmlspecialchars($origin) . "</li>
+                        <li><strong>Destination :</strong> " . htmlspecialchars($destination) . "</li>
+                        <li><strong>Origine :</strong> " . htmlspecialchars($origin) . "</li>
                         <li><strong>Numéro de Réservation :</strong> " . htmlspecialchars($numeroServicioConLetra) . "</li>
                         <li><strong>Date de Réservation :</strong> " . htmlspecialchars($date1) . "</li>
                         <li><strong>Heure :</strong> " . htmlspecialchars($hour) . "</li>

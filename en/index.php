@@ -375,7 +375,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="../images/auto1.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="../images/changai.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
                         </div>
@@ -386,7 +386,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="../images/auto6.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="../images/changai8.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
                         </div>
@@ -398,7 +398,7 @@ $dotenv->load();
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
                         <div class="event-default">
-                            <figure class="event-default-image"><img src="../images/auto10.jpg" alt="" width="570" height="370" />
+                            <figure class="event-default-image"><img src="../images/changai4.jpg" alt="" width="570" height="370" />
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">Learn More</a></div>
                         </div>
