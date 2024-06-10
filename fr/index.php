@@ -267,10 +267,7 @@ $dotenv->load();
                                     </div>
                                 </div>
 
-                                <!-- <div class="form-wrap form-button">
-                                    <span id="moreOptionsBtn" class="span-button">Plus d'options</span>
-                                </div> -->
-
+                               
                                 <div class="form-wrap form-button">
                                     <button type="button" id="submitBtn" class="button button-block button-secondary">Réserver</button>
                                 </div>
@@ -357,36 +354,6 @@ $dotenv->load();
             </div>
         </div>
     </div>
-
-
-    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Itinéraire à parcourir</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Fermer">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-lg-12" id="map"></div>
-                            <div class="">
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="button" id="confirmBtn" class="btn btn-primary">Confirmer</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-
 
     <section class="section section-variant-1 bg-default novi-background bg-cover">
         <div class="container container-wide">
