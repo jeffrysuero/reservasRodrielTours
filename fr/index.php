@@ -254,15 +254,15 @@ $dotenv->load();
                                     </div>
 
                                     <div class="col-sm-12">
-                                        <label class="form-label-outside">Destination</label>
-                                        <div class="form-wrap form-wrap-inline">
-                                            <input type="text" name="destination" id="destination" required class="form-input input-append" placeholder="Destination">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
                                         <label class="form-label-outside">Origine</label>
                                         <div class="form-wrap form-wrap-inline">
                                             <input type="text" name="origin" id="origin" required class="form-input input-append" placeholder="Origine">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label class="form-label-outside">Destination</label>
+                                        <div class="form-wrap form-wrap-inline">
+                                            <input type="text" name="destination" id="destination" required class="form-input input-append" placeholder="Destination">
                                         </div>
                                     </div>
                                 </div>
