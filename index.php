@@ -260,7 +260,7 @@ $dotenv->load();
                                             <input type="text" name="origin" id="origin" required class="form-input input-append" placeholder="Origen">
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-sm-12">
                                         <label class="form-label-outside">Destino</label>
                                         <div class="form-wrap form-wrap-inline">
@@ -307,13 +307,14 @@ $dotenv->load();
                                     <div class="col-sm-4">
                                         <label class="form-label-outside">Hora</label>
                                         <div class="form-wrap form-wrap-inline">
-                                            <input type="time" name="hour" id="hour" required class="form-input input-append" placeholder="Hora">
+                                            <input pattern="[0-9]{2}:[0-9]{2}" type="time" name="hour" step="2" id="hour" required class="form-input input-append" placeholder="Hora">
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-lg-4">
                                         <label class="form-label-outside">Fecha Reserva</label>
                                         <div class="form-wrap form-wrap-validation">
-                                            <input class="form-input" id="dateForm" name="date1" id="datepicker" required type="text" data-time-picker="date">
+                                            <input class="form-input" id="dateForm" name="date1" required type="text" data-time-picker="date">
+                                            <!-- <input class="form-input" id="dateForm" name="date1" id="datepicker" required type="text" data-time-picker="date"> -->
                                             <label class="form-label" for="dateForm">Fecha Reserva</label>
                                         </div>
                                     </div>
@@ -628,6 +629,20 @@ $dotenv->load();
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+        function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+
         document.getElementById('submitBtn').addEventListener('click', function() {
             var form = document.getElementById('reservationForm');
 
@@ -647,73 +662,74 @@ $dotenv->load();
             // Crear objeto FormData y agregar los datos del formulario
             var formData = new FormData(form);
             var email = document.getElementById('email').value;
-            console.log("🚀 ~ document.getElementById ~ email:", email)
             var hour = document.getElementById('hour').value;
             var date1 = document.getElementById('dateForm').value;
             var numVuelo = document.getElementById('numVuelo').value;
             var suitcases = document.getElementById('suitcases').value;
             var adults = document.getElementById('adults').value;
             var children = document.getElementById('children').value;
-
+            
             // Crear objeto FormData y agregar los datos del formulario y los adicionales
+            var formDate = formatDate(date1)
+            console.log("🚀 ~ document.getElementById ~ hour:", hour)
+            
+            // formData.append('email', email);
+            // formData.append('hour', hour);
+            // formData.append('date1', formDate);
+            // if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
+            //     formData.append('numVuelo', numVuelo);
+            // }
+            // formData.append('suitcases', suitcases);
+            // formData.append('adults', adults);
+            // if (children.trim() !== '') {
 
-            formData.append('email', email);
-            formData.append('hour', hour);
-            formData.append('date1', date1);
-            if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
-                formData.append('numVuelo', numVuelo);
-            }
-            formData.append('suitcases', suitcases);
-            formData.append('adults', adults);
-            if (children.trim() !== '') {
+            //     formData.append('children', children);
+            // }
+            // // Configurar la solicitud AJAX
+            // var xhr = new XMLHttpRequest();
+            // xhr.open('POST', 'process/processReservation.php', true);
+            // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-                formData.append('children', children);
-            }
-            // Configurar la solicitud AJAX
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'process/processReservation.php', true);
-            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+            // // Manejadores de respuesta
+            // xhr.onload = function() {
+            //     if (xhr.status >= 200 && xhr.status < 300) {
+            //         try {
+            //             var response = JSON.parse(xhr.responseText);
+            //             Swal.fire({
+            //                 position: "top-end",
+            //                 icon: "success",
+            //                 title: response.message,
+            //                 showConfirmButton: false,
+            //                 timer: 1500
+            //             });
+            //             form.reset();
+            //             $('#exampleModal').modal('hide');
+            //         } catch (e) {
+            //             Swal.fire({
+            //                 position: "top-end",
+            //                 icon: "error",
+            //                 title: "Error inesperado. Verifica la consola para más detalles.",
+            //                 showConfirmButton: false,
+            //                 timer: 1500
+            //             });
+            //             console.error("No se pudo parsear la respuesta como JSON:", e);
+            //             console.error("Respuesta recibida:", xhr.responseText);
+            //         }
+            //     } else {
+            //         Swal.fire({
+            //             position: "top-end",
+            //             icon: "error",
+            //             title: "Error en la solicitud AJAX. Verifica la consola para más detalles.",
+            //             showConfirmButton: false,
+            //             timer: 1500
+            //         });
+            //         console.error("Error en la solicitud AJAX:", xhr.status, xhr.statusText);
+            //         console.error("Respuesta del servidor:", xhr.responseText);
+            //     }
+            // };
 
-            // Manejadores de respuesta
-            xhr.onload = function() {
-                if (xhr.status >= 200 && xhr.status < 300) {
-                    try {
-                        var response = JSON.parse(xhr.responseText);
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: response.message,
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        form.reset();
-                        $('#exampleModal').modal('hide');
-                    } catch (e) {
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "error",
-                            title: "Error inesperado. Verifica la consola para más detalles.",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        console.error("No se pudo parsear la respuesta como JSON:", e);
-                        console.error("Respuesta recibida:", xhr.responseText);
-                    }
-                } else {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "error",
-                        title: "Error en la solicitud AJAX. Verifica la consola para más detalles.",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    console.error("Error en la solicitud AJAX:", xhr.status, xhr.statusText);
-                    console.error("Respuesta del servidor:", xhr.responseText);
-                }
-            };
-
-            // Enviar la solicitud
-            xhr.send(formData);
+            // // Enviar la solicitud
+            // xhr.send(formData);
         });
     </script>
     <script>

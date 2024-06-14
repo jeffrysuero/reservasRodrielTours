@@ -309,7 +309,8 @@ $dotenv->load();
                                     <div class="col-sm-12 col-lg-4">
                                         <label class="form-label-outside">Date de réservation</label>
                                         <div class="form-wrap form-wrap-validation">
-                                            <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date">
+                                        <input class="form-input" id="dateForm" name="date1" required type="text" data-time-picker="date">    
+                                        <!-- <input class="form-input" id="dateForm" name="date1" id="datepicker" type="text" data-time-picker="date"> -->
                                             <label class="form-label" for="dateForm">Date de réservation</label>
                                         </div>
                                     </div>
@@ -622,6 +623,20 @@ $dotenv->load();
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
+          function formatDate(date) {
+            var d = new Date(date),
+                month = '' + (d.getMonth() + 1),
+                day = '' + d.getDate(),
+                year = d.getFullYear();
+
+            if (month.length < 2)
+                month = '0' + month;
+            if (day.length < 2)
+                day = '0' + day;
+
+            return [year, month, day].join('-');
+        }
+
         document.getElementById('submitBtn').addEventListener('click', function() {
             var form = document.getElementById('reservationForm');
 
@@ -649,10 +664,10 @@ $dotenv->load();
             var children = document.getElementById('children').value;
 
             // Crear objeto FormData y agregar los datos del formulario y los adicionales
-
+            var formDate = formatDate(date1)
             formData.append('email', email);
             formData.append('hour', hour);
-            formData.append('date1', date1);
+            formData.append('date1', formDate);
             if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
                 formData.append('numVuelo', numVuelo);
             }
