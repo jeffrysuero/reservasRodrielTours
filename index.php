@@ -673,63 +673,63 @@ $dotenv->load();
             var formDate = formatDate(date1)
             console.log("🚀 ~ document.getElementById ~ hour:", hour)
             
-            // formData.append('email', email);
-            // formData.append('hour', hour);
-            // formData.append('date1', formDate);
-            // if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
-            //     formData.append('numVuelo', numVuelo);
-            // }
-            // formData.append('suitcases', suitcases);
-            // formData.append('adults', adults);
-            // if (children.trim() !== '') {
+            formData.append('email', email);
+            formData.append('hour', hour);
+            formData.append('date1', formDate);
+            if (numVuelo.trim() !== '') { // Verificar si el número de vuelo no está vacío
+                formData.append('numVuelo', numVuelo);
+            }
+            formData.append('suitcases', suitcases);
+            formData.append('adults', adults);
+            if (children.trim() !== '') {
 
-            //     formData.append('children', children);
-            // }
-            // // Configurar la solicitud AJAX
-            // var xhr = new XMLHttpRequest();
-            // xhr.open('POST', 'process/processReservation.php', true);
-            // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+                formData.append('children', children);
+            }
+            // Configurar la solicitud AJAX
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'process/processReservation.php', true);
+            xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-            // // Manejadores de respuesta
-            // xhr.onload = function() {
-            //     if (xhr.status >= 200 && xhr.status < 300) {
-            //         try {
-            //             var response = JSON.parse(xhr.responseText);
-            //             Swal.fire({
-            //                 position: "top-end",
-            //                 icon: "success",
-            //                 title: response.message,
-            //                 showConfirmButton: false,
-            //                 timer: 1500
-            //             });
-            //             form.reset();
-            //             $('#exampleModal').modal('hide');
-            //         } catch (e) {
-            //             Swal.fire({
-            //                 position: "top-end",
-            //                 icon: "error",
-            //                 title: "Error inesperado. Verifica la consola para más detalles.",
-            //                 showConfirmButton: false,
-            //                 timer: 1500
-            //             });
-            //             console.error("No se pudo parsear la respuesta como JSON:", e);
-            //             console.error("Respuesta recibida:", xhr.responseText);
-            //         }
-            //     } else {
-            //         Swal.fire({
-            //             position: "top-end",
-            //             icon: "error",
-            //             title: "Error en la solicitud AJAX. Verifica la consola para más detalles.",
-            //             showConfirmButton: false,
-            //             timer: 1500
-            //         });
-            //         console.error("Error en la solicitud AJAX:", xhr.status, xhr.statusText);
-            //         console.error("Respuesta del servidor:", xhr.responseText);
-            //     }
-            // };
+            // Manejadores de respuesta
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    try {
+                        var response = JSON.parse(xhr.responseText);
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "success",
+                            title: response.message,
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        form.reset();
+                        $('#exampleModal').modal('hide');
+                    } catch (e) {
+                        Swal.fire({
+                            position: "top-end",
+                            icon: "error",
+                            title: "Error inesperado. Verifica la consola para más detalles.",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        console.error("No se pudo parsear la respuesta como JSON:", e);
+                        console.error("Respuesta recibida:", xhr.responseText);
+                    }
+                } else {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "error",
+                        title: "Error en la solicitud AJAX. Verifica la consola para más detalles.",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    console.error("Error en la solicitud AJAX:", xhr.status, xhr.statusText);
+                    console.error("Respuesta del servidor:", xhr.responseText);
+                }
+            };
 
-            // // Enviar la solicitud
-            // xhr.send(formData);
+            // Enviar la solicitud
+            xhr.send(formData);
         });
     </script>
     <script>
