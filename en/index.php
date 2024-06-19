@@ -669,6 +669,11 @@ $dotenv->load();
             var adults = document.getElementById('adults').value;
             var children = document.getElementById('children').value;
 
+             // Validar que los campos obligatorios no estén vacíos
+             if (email.trim() === '' || hour.trim() === '' || date1.trim() === '' || suitcases.trim() === '' || adults.trim() === '') {
+                alert('Por favor, completa todos los campos obligatorios.');
+                return; // Detener la ejecución si algún campo obligatorio está vacío
+            }
             // Crear objeto FormData y agregar los datos del formulario y los adicionales
             var formDate = formatDate(date1)
             formData.append('email', email);
