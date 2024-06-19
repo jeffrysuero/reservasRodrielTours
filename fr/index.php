@@ -665,7 +665,7 @@ $dotenv->load();
 
              // Validar que los campos obligatorios no estén vacíos
              if (email.trim() === '' || hour.trim() === '' || date1.trim() === '' || suitcases.trim() === '' || adults.trim() === '') {
-                alert('Por favor, completa todos los campos obligatorios.');
+                alert('Sil-vous-plaît complétez tous les champs requis.');
                 return; // Detener la ejecución si algún campo obligatorio está vacío
             }
             // Crear objeto FormData y agregar los datos del formulario y los adicionales
