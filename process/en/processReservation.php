@@ -91,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $clientId = $conn->insert_id;
 
         // Insertar en la tabla reservations
-        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate, hour, clientId, airport, hotel, num_air, numChildren, numInfant, Datellegada, page) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt2 = $conn->prepare("INSERT INTO reservations (total_cost, min_KM, suitcases, numPeople, numServcice, arrivalDate, hour, clientId, airport, hotel, num_air, numChildren, numInfant, Datellegada, page,created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())");
         if (!$stmt2) {
             throw new Exception("Error en la preparación de la declaración (reservations): " . $conn->error);
         }

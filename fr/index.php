@@ -697,7 +697,7 @@ $dotenv->load();
                             icon: "success",
                             title: response.message,
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 1000
                         });
                         form.reset();
                         $('#exampleModal').modal('hide');
@@ -707,7 +707,7 @@ $dotenv->load();
                             icon: "error",
                             title: "Error inesperado. Verifica la consola para más detalles.",
                             showConfirmButton: false,
-                            timer: 1500
+                            timer: 1000
                         });
                         console.error("No se pudo parsear la respuesta como JSON:", e);
                         console.error("Respuesta recibida:", xhr.responseText);
